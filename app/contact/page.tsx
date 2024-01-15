@@ -1,10 +1,10 @@
-import React from "react";
+import { MotionWrapper } from "@/components/motion-wrapper";
 
 const ContactPage = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <MotionWrapper>
       <h1 className="text-6xl font-black">Contact.</h1>
-    </main>
+    </MotionWrapper>
   );
 };
 

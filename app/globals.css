@@ -59,10 +59,25 @@
 }
 
 @font-face {
-  font-family: 'BaseFont';
-  src: url('/fonts/PaytoneOne.ttf') format('truetype');
+  font-family: 'HeadFont';
+  src: url('../fonts/Poppins-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ParagraphFont';
+  src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 h1 {
-  font-family: 'BaseFont', sans-serif;
+  font-family: 'HeadFont', sans-serif;
 }
+
+p {
+  font-family: 'ParagraphFont', sans-serif;
+}
+
+.page-transition {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+

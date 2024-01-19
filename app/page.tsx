@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { MotionWrapper } from "@/components/motion-wrapper";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,6 +15,14 @@ export default function Home() {
       />
       <h1 className="text-6xl font-black">I am Ferhat Ucar</h1>
       <h2 className="text-2xl font-bold">Software Engineer</h2>
+      <div className="flex gap-2 justify-between mt-3">
+        <Button>
+          <Link href="/contact">Book me</Link>
+        </Button>
+        <Button variant="secondary">
+          <Link href="/about">About me</Link>
+        </Button>
+      </div>
     </MotionWrapper>
   );
 }

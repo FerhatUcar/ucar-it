@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: 20 14.3% 4.1%;
+    --background: 10 2.3% 10.1%;
     --foreground: 0 0% 95%;
     --card: 24 9.8% 10%;
     --card-foreground: 0 0% 95%;
@@ -68,16 +68,11 @@
   src: url('../fonts/Poppins-Regular.ttf') format('truetype');
 }
 
-h1 {
+h1, h2, h3 {
   font-family: 'HeadFont', sans-serif;
 }
 
 p {
   font-family: 'ParagraphFont', sans-serif;
-}
-
-.page-transition {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
 }
 

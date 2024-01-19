@@ -7,7 +7,7 @@ import {
   TrendingUpIcon,
   UserRound,
 } from "lucide-react";
-export const paragraphs = [
+export const AboutParagraphs = [
   {
     title: "The person.",
     desc: "Who am I",
@@ -54,29 +54,50 @@ export const paragraphs = [
 
 export const workInformation = [
   {
+    company: "Team Rockstars",
+    date: "2021-Now",
+    place: "Tilburg",
+    title: "Software Engineer",
+    text: "Discord Clone: I cloned Discord with NextJS, React and Tailwind CSS. You can register with a OAuth provider that is build with Clerk and NextAuth. The data is structured with Prisma and stored on PlanetScale. As an member or admin you can create servers and channels, where you can chat and video call with other members that is invited. SocketIO is used for that. I used Tailwind CSS and ShadCN to style the dashboard. The project is deployed with Vercel.",
+    text2:
+      "Issue Tracker: I created Jira-Like issue tracker web application. I used OAuth Google Provider where you can register as an user. You can create, edit or delete tickets and assign to other users. Tickets are structured with Prisma and stored in PlanetScale. I used Tailwind CSS and RadixUI to style the dashboard. The project is deployed with Vercel.",
+    stack:
+      "Stack: HTML5, NextJS, TypeScript, React, Tailwind CSS, Recoil/Zustand, React hook forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
+  },
+  {
     company: "ASML",
+    date: "2021-2023",
     place: "Veldhoven",
     title: "Software Engineer",
     text: "1 year: Worked on web-components with Storybook, styled‑components and React. In a agile team of 7 developers. Writing tests with react‑jest‑library and Enzyme. Writing e2e tests with Cypress. Planning is made through. Jira and the pipeline is used on BitBucket.",
     text2:
       "1.5 year: After 1 year I was moved to a more complex team with members, where we transform data and put it into different types of graphs, that is build with React.",
     stack:
-      "Stack: HTML5, Styled components, TypeScipt, Immutable, Lodash, React, Redux & React hook forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
+      "Stack: HTML5, Styled components, TypeScript, Immutable, Lodash, React, Redux & React hook forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
   },
   {
-    company: "Scanly",
+    company: "Scanly BV",
+    date: "2019-2022",
     place: "Rotterdam",
     title: "CO founder & Software Engineer",
     text:
-      "Project management on the CMS and Front‑end. Head of marketing. Lead of infrastructure and Firebase functions/\n" +
+      "Project management on the CMS and Front‑end. Head of marketing. Lead of infrastructure and Firebase functions\n" +
       "database. Developing a native app in Typescript, Angular and Cordova. Building the UI with Ionic. Designing\n" +
-      "and building the app to the Apple App Store and Google Playstore. Testing and support for back‑end development\n" +
+      "and building the app to the Apple App Store and Google PlayStore. Testing and support for back‑end development\n" +
       "in Python for object detection in TensorFlow. Deployed on Vercel.",
+    text2:
+      "With a rich background as a front-end developer, I've demonstrated proficiency in designing and implementing compelling user interfaces for a native app, showcasing a keen eye for both aesthetics and functionality. Collaborating closely with a single backend developer, I've successfully integrated frontend workflows into a streamlined DevOps process, ensuring the swift and dependable deployment of our native application.",
+    text3:
+      "My experience extends to managing the interface between frontend development and server infrastructure, implementing best practices in Infrastructure as Code (IaC) to optimize the efficiency of our development lifecycle. Working in tandem with a cross-functional team, I've effectively communicated and collaborated to foster a collaborative DevOps culture, leading to enhanced efficiency and a quicker turnaround in delivering our native app.",
+    text4:
+      "Beyond creating captivating user experiences, I've automated critical build processes, implemented robust testing strategies, and contributed to the overall reliability and performance of our native application through a DevOps-centric approach, even in a small team setting.",
     stack:
       "Stack: HTML5, SCSS, TypeScript, Angular, Ionic, Cordova, TensorFlow, Python, Xcode & Vercel.",
   },
   {
     company: "Eneco",
+    date: "2021",
+    months: "(3 months)",
     place: "Rotterdam",
     title: "Front-end Engineer",
     text: "Worked on the web components with Storybook, styled‑components andReact. In a team of 5 developers where we used the agile methodology to optimally improve the UI and user statistics.",
@@ -85,6 +106,8 @@ export const workInformation = [
   },
   {
     company: "GZ Plein",
+    date: "2021",
+    months: "(3 months)",
     place: "Rotterdam",
     title: "Lead Front-end Engineer",
     text:
@@ -99,6 +122,8 @@ export const workInformation = [
   },
   {
     company: "Kamer van Koophandel",
+    date: "2021",
+    months: "(3 months)",
     place: "Rotterdam",
     title: "Front-end Engineer",
     text:
@@ -113,6 +138,7 @@ export const workInformation = [
   },
   {
     company: "Ministerie van Binnenlandse zaken",
+    date: "2020-2021",
     place: "Zoetermeer",
     title: "Software Engineer & UX Designer",
     text:
@@ -128,6 +154,7 @@ export const workInformation = [
   },
   {
     company: "Calvi",
+    date: "2018-2019",
     place: "Nederhemert Zuid",
     title: "Front-end Engineer & UX Designer",
     text:
@@ -146,6 +173,7 @@ export const workInformation = [
   },
   {
     company: "QI Press Controls",
+    date: "2016-2018",
     place: "Oosterhout",
     title: "Lead Front-end Engineer",
     text:
@@ -160,6 +188,7 @@ export const workInformation = [
   },
   {
     company: "eHealth Ventures Group",
+    date: "2015-2016",
     place: "Oud Gastel",
     title: "Front-end Engineer",
     text:
@@ -173,6 +202,7 @@ export const workInformation = [
   },
   {
     company: "Bond for web solutions",
+    date: "2014-2015",
     place: "Rotterdam",
     title: "Front-end Engineer",
     text:

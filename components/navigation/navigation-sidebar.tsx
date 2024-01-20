@@ -38,8 +38,6 @@ const NavigationSidebar = () => {
           </Button>
         </Link>
       ))}
-      <Separator className="h-[2px] my-2 bg-zinc-300 dark:bg-zinc-700 rounded-md w-10" />
-      <ModeToggle />
     </div>
   );
 };

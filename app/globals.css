@@ -76,3 +76,12 @@ p {
   font-family: 'ParagraphFont', sans-serif;
 }
 
+.progress circle,
+.progress rect,
+.progress line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+

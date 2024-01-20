@@ -21,7 +21,7 @@ const WorkPage = () => {
   const pageParagraphs = data.map((p, i) => (
     <div key={i} className="flex">
       <div className="flex flex-col min-w-32">
-        <div className="text-xs mx-auto mb-2 rounded-md bg-gray-200 dark:bg-rose-900 p-2 flex flex-col text-center">
+        <div className="text-xs mx-auto mb-2 rounded-md bg-gray-200 dark:bg-rose-800 p-2 flex flex-col text-center">
           <span>{p.date}</span>
           <span>{p.months}</span>
         </div>
@@ -36,14 +36,14 @@ const WorkPage = () => {
           <CardHeader className="text-gray-700">
             <CardTitle className="dark:text-white">{p.company}</CardTitle>
             <CardDescription>
-              {p.place} | {p.title}
+              {p.place} | <span className="text-rose-400">{p.title}</span>
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col text-gray-400 space-y-2">
             <p>{p.text}</p>
-            <p>{p.text2}</p>
-            <p>{p.text3}</p>
-            <p>{p.text4}</p>
+            {p.text2 && <p>{p.text2}</p>}
+            {p.text3 && <p>{p.text3}</p>}
+            {p.text4 && <p>{p.text4}</p>}
           </CardContent>
           <CardFooter>
             <p>{p.stack}</p>
@@ -61,7 +61,10 @@ const WorkPage = () => {
         {!hideButton && (
           <div className="flex">
             <div className="flex flex-col min-w-32"></div>
-            <Button className={`mt-3 w-full`} onClick={handleLoadMore}>
+            <Button
+              className="mt-3 w-full transition-all hover:translate-y-[-3px]"
+              onClick={handleLoadMore}
+            >
               Load More
             </Button>
           </div>

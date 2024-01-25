@@ -46,7 +46,7 @@ export const AboutParagraphs = [
   },
   {
     title: "This is Ferhat.",
-    desc: "In general",
+    desc: "In summary",
     icon: BookOpenIcon,
     text: "In summary, Ferhat is a multifaceted individual whose passion for technology, design, travel, and family enriches both their professional and personal life. Their journey is a testament to the harmonious blend of creativity and technical expertise, making them a truly unique and inspiring figure in the world of software engineering and design.",
   },

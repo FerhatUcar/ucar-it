@@ -12,6 +12,21 @@ const headers = [
     percents: 99
   },
   {
+    title: "Angular",
+    src: "/angular.png",
+    percents: 70
+  },
+  {
+    title: "Node.js",
+    src: "/node.png",
+    percents: 77
+  },
+  {
+    title: "Python",
+    src: "/python.png",
+    percents: 35
+  },
+  {
     title: "TypeScript",
     src: "/ts.png",
     percents: 95
@@ -28,22 +43,29 @@ const headers = [
   },
   {
     title: "Prisma",
-    src: "/tailwind.png",
+    src: "/prisma.png",
     percents: 78
   },
   {
     title: "Docker",
-    src: "/tailwind.png",
+    src: "/docker.png",
+    logoWidth: 50,
     percents: 60
   },
   {
     title: "MySQL",
-    src: "/tailwind.png",
+    src: "/sql.png",
+    logoWidth: 50,
     percents: 66
   },
   {
+    title: "Echarts",
+    src: "/echarts.png",
+    percents: 95
+  },
+  {
     title: "Cypress",
-    src: "/tailwind.png",
+    src: "/cypress.png",
     percents: 83
   },
 ];
@@ -52,12 +74,12 @@ const SkillsPage = () => {
   return (
     <MotionWrapper>
       <h1 className="text-6xl font-black mb-6">Skills.</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {headers.map(({ src, title, percents }, i) => (
-          <Card key={i} className="dark:bg-stone-950/50 shadow">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:w-auto w-full px-8">
+        {headers.map(({ src, title, percents, logoWidth }) => (
+          <Card key={title} className="dark:bg-stone-950/50 shadow">
             <CardHeader className="flex flex-row items-center gap-3 text-gray-700">
               <CardTitle className="dark:text-white flex items-center gap-2">
-                <Image src={src} alt={title} width="32" height="32" />
+                <Image src={src} alt={title} width={logoWidth ?? "32"} height="32" />
                 <span>{title}</span>
               </CardTitle>
             </CardHeader>

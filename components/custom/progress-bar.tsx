@@ -38,7 +38,7 @@ export const ProgressCircle = ({
 
   return (
     <div className="relative">
-      <div className="absolute top-[38px] left-[70px] flex justify-center">
+      <div className="font-black absolute top-[38px] left-[47%] md:left-[42%]">
         <Counter valueTo={percents} totalDuration={duration + delay} />%
       </div>
       <div className="relative flex justify-center">

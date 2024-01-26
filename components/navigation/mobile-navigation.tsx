@@ -23,7 +23,7 @@ const MobileNavigation = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between bg-neutral-950 w-full h-14">
+    <div className="md:hidden flex flex-row items-center justify-between bg-neutral-950 w-full h-14">
       <div className="flex flex-row items-center gap-2 pl-4">
         <Image
           src="/ferry.jpg"
@@ -49,7 +49,7 @@ const MobileNavigation = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="md:hidden bg-neutral-800 fixed inset-0 h-screen p-2 z-20">
+          <div className="bg-neutral-800 fixed inset-0 h-screen p-2 z-20">
             <Button
               variant="ghost"
               className="float-right"

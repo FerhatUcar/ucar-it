@@ -38,7 +38,7 @@ const iconMap = {
   message: <MessageCircle size={16} color={baseColor} />,
 };
 
-const selectFieldSubjects = ["Booking", "Question", "Other"];
+export const selectFieldSubjects = ["Booking", "Question", "Other"];
 
 const renderField = (
   type: FieldType["type"],
@@ -86,7 +86,7 @@ const Field: FC<FieldType> = ({ form, label, type }) => (
     name={label}
     render={({ field }) => (
       <FormItem>
-        <FormLabel className="flex flex-row gap-2 mb-4 text-white">
+        <FormLabel className="flex flex-row gap-2 text-white">
           {iconMap[label]}
           {label.toUpperCase()}
         </FormLabel>

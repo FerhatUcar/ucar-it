@@ -7,21 +7,14 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import Field from "@/components/custom/formfield";
+import Field, { selectFieldSubjects } from "@/components/custom/formfield";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { wait } from "next/dist/lib/wait";
-import {
-  AlertCircle,
-  Building,
-  Mail,
-  MapPin,
-  NotebookText,
-  Phone,
-} from "lucide-react";
+import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { generateCaptcha } from "@/utils/captcha";
 import { baseColor } from "@/app/const";
@@ -40,7 +33,11 @@ const formSchema = z.object({
     message: "Name must be at least 3 characters.",
   }),
   email: z.string().email(),
-  subject: z.string(),
+  subject: z
+    .string()
+    .refine((value) => selectFieldSubjects.includes(value), {
+      message: "Select a subject",
+    }),
   message: z.string().min(1, {
     message: "Message can't be empty",
   }),
@@ -101,9 +98,8 @@ const ContactPage = () => {
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           )}
-
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <Field form={form} label="name" type="input" />
               <Field form={form} label="email" type="input" />
               <Field form={form} label="subject" type="select" />

@@ -21,7 +21,7 @@ const Captcha: FC<CaptchaProps> = ({
   };
   return (
     <div>
-      <div className="flex flex-row gap-2 mb-4 text-white items-center">
+      <div className="flex flex-row gap-2 mb-2 text-white items-center">
         <Bot size={20} color={baseColor} />
         <span>Are you a human?</span>
       </div>

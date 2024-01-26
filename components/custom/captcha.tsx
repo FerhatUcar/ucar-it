@@ -9,7 +9,7 @@ type CaptchaProps = {
   setUserInput: Dispatch<SetStateAction<string>>;
 };
 
-export const Captcha: FC<CaptchaProps> = ({
+const Captcha: FC<CaptchaProps> = ({
   captchaValue,
   userInput,
   setUserInput,
@@ -23,7 +23,7 @@ export const Captcha: FC<CaptchaProps> = ({
     <div>
       <div className="flex flex-row gap-2 mb-4 text-white items-center">
         <Bot size={20} color={baseColor} />
-        <span>Are u human?</span>
+        <span>Are you a human?</span>
       </div>
       <div className="flex flex-row items-center">
         <label className="w-[100px]">{captchaValue} =</label>
@@ -32,3 +32,5 @@ export const Captcha: FC<CaptchaProps> = ({
     </div>
   );
 };
+
+export default Captcha;

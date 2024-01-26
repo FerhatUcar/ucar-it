@@ -1,12 +1,42 @@
 import {
   BookOpenIcon,
+  Building,
   CameraIcon,
   Coffee,
+  Mail,
+  MapPin,
+  NotebookText,
+  Phone,
   Pizza,
   Plane,
   TrendingUpIcon,
   UserRound,
 } from "lucide-react";
+import { baseColor } from "@/app/const";
+
+export const contactDetails = [
+  {
+    icon: Building,
+    text: "Ucar IT",
+  },
+  {
+    icon: MapPin,
+    text: "Dordrecht, NL",
+  },
+  {
+    icon: Phone,
+    text: "+31628843263",
+  },
+  {
+    icon: Mail,
+    text: "info@ucar-it.nl",
+  },
+  {
+    icon: NotebookText,
+    text: "KVK 94029023",
+  },
+];
+
 export const AboutParagraphs = [
   {
     title: "The person.",

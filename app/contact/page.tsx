@@ -10,15 +10,28 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Field from "@/components/custom/formfield";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { Card } from "@/components/ui/card";
-import { Captcha } from "@/components/custom/captcha";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { wait } from "next/dist/lib/wait";
-import { AlertCircle } from "lucide-react";
+import {
+  AlertCircle,
+  Building,
+  Mail,
+  MapPin,
+  NotebookText,
+  Phone,
+} from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { generateCaptcha } from "@/utils/captcha";
 import { baseColor } from "@/app/const";
+import dynamic from "next/dynamic";
+import HeaderTitle from "@/components/custom/header";
+import { contactDetails } from "@/data/data";
+
+const Captcha = dynamic(() => import("@/components/custom/captcha"), {
+  ssr: false,
+});
 
 type FormDataType = z.infer<typeof formSchema>;
 
@@ -27,6 +40,7 @@ const formSchema = z.object({
     message: "Name must be at least 3 characters.",
   }),
   email: z.string().email(),
+  subject: z.string(),
   message: z.string().min(1, {
     message: "Message can't be empty",
   }),
@@ -39,6 +53,7 @@ const ContactPage = () => {
     defaultValues: {
       name: "",
       email: "",
+      subject: "",
       message: "",
     },
   });
@@ -55,7 +70,7 @@ const ContactPage = () => {
       if (inputCorrect) {
         setCaptchaValue(generateCaptcha());
         setUserInput("");
-        setSubmitting(true)
+        setSubmitting(true);
 
         await wait(2000);
 
@@ -76,51 +91,71 @@ const ContactPage = () => {
 
   return (
     <MotionWrapper>
-      <h1 className="text-6xl font-black">Lets chat.</h1>
+      <HeaderTitle text="Lets chats" />
+      <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full px-4 lg:px-0">
+        <Card className="bg-stone-950/50 shadow lg:col-span-3 p-6 mt-4">
+          {error && (
+            <Alert className={`mb-4 ${shouldShake && "shake"}`}>
+              <AlertCircle className="h-4 w-4" color={baseColor} />
+              <AlertTitle>Oops..</AlertTitle>
+              <AlertDescription>{error}</AlertDescription>
+            </Alert>
+          )}
 
-      <Card className="dark:bg-stone-950/50 shadow p-4 m-4 w-[95%] md:w-full">
-        {error && (
-          <Alert
-            className={`mb-4 ${shouldShake && "shake"}`}
-          >
-            <AlertCircle className="h-4 w-4" color={baseColor} />
-            <AlertTitle>Oops..</AlertTitle>
-            <AlertDescription>{error}</AlertDescription>
-          </Alert>
-        )}
-
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <Field form={form} label="name" />
-            <Field form={form} label="email" />
-            <Field form={form} label="message" isTextarea />
-            <Captcha
-              captchaValue={captchaValue}
-              userInput={userInput}
-              setUserInput={setUserInput}
-            />
-            <Button className="m-0" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <span className="flex flex-row">
-                  <svg className="spinner mr-3" viewBox="0 0 50 50">
-                    <circle
-                      className="path"
-                      cx="25"
-                      cy="25"
-                      r="20"
-                      fill="none"
-                      strokeWidth="5"
-                    ></circle>
-                  </svg>
-                  Sending email..
-                </span>
-              ) : (
-                "Submit"
-              )}
-            </Button>
-          </form>
-        </Form>
-      </Card>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              <Field form={form} label="name" type="input" />
+              <Field form={form} label="email" type="input" />
+              <Field form={form} label="subject" type="select" />
+              <Field form={form} label="message" type="textarea" />
+              <Captcha
+                captchaValue={captchaValue}
+                userInput={userInput}
+                setUserInput={setUserInput}
+              />
+              <Button
+                className="m-0 w-full md:w-[150px] float-right"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <span className="flex flex-row">
+                    <svg className="spinner mr-3" viewBox="0 0 50 50">
+                      <circle
+                        className="path"
+                        cx="25"
+                        cy="25"
+                        r="20"
+                        fill="none"
+                        strokeWidth="5"
+                      ></circle>
+                    </svg>
+                    Sending email..
+                  </span>
+                ) : (
+                  "Submit"
+                )}
+              </Button>
+            </form>
+          </Form>
+        </Card>
+        <Card className="bg-stone-950/50 shadow mt-4">
+          <CardHeader className="flex flex-row items-center uppercase">
+            Information
+          </CardHeader>
+          <CardContent>
+            {contactDetails.map((detail) => (
+              <div
+                key={detail.text}
+                className="flex flex-row gap-2 mb-4 items-center"
+              >
+                <detail.icon size={16} color={baseColor} />
+                <span>{detail.text}</span>
+              </div>
+            ))}
+          </CardContent>
+        </Card>
+      </div>
     </MotionWrapper>
   );
 };

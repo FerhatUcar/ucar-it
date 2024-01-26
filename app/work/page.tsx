@@ -13,6 +13,8 @@ import {
 import { workInformation } from "@/data/data";
 import { Button } from "@/components/ui/button";
 import useHandleMore from "@/hooks/useHandleMore";
+import HeaderTitle from "@/components/custom/header";
+import TimeLine from "@/components/custom/timeline";
 
 const WorkPage = () => {
   const initialData = workInformation.slice(0, 3);
@@ -20,19 +22,13 @@ const WorkPage = () => {
 
   const pageParagraphs = data.map((p, i) => (
     <div key={i} className="flex">
-      <div className="flex flex-col min-w-32">
-        <div className="text-xs mx-auto mb-2 rounded-md bg-gray-200 dark:bg-rose-800 p-2 flex flex-col text-center">
-          <span>{p.date}</span>
-          <span>{p.months}</span>
-        </div>
-        <div className="border-2 border-rose-900 dark:border-white mx-auto h-full"></div>
-      </div>
+      <TimeLine date={p.date} months={p.months} />
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="dark:bg-stone-950/50 shadow">
+        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mr-6">
           <CardHeader className="text-gray-700">
             <CardTitle className="dark:text-white">{p.company}</CardTitle>
             <CardDescription>
@@ -55,14 +51,14 @@ const WorkPage = () => {
 
   return (
     <MotionWrapper>
-      <h1 className="text-6xl font-black mb-6">Work experience.</h1>
+      <HeaderTitle text="Work Experience" bottomSpace />
       <div className="grid grid-cols-1 gap-4">
         {pageParagraphs}
         {!hideButton && (
           <div className="flex">
             <div className="flex flex-col min-w-32"></div>
             <Button
-              className="mt-3 w-full transition-all hover:translate-y-[-3px]"
+              className="mt-3 w-full transition-all hover:translate-y-[-3px] lg:mr-0 mr-6"
               onClick={handleLoadMore}
             >
               Load More

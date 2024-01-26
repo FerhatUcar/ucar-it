@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { AboutParagraphs } from "@/data/data";
 import { baseColor } from "@/app/const";
+import HeaderTitle from "@/components/custom/header";
 
 const AboutPage = () => {
   const pageParagraphs = AboutParagraphs.map((p, i) => (
@@ -27,7 +28,7 @@ const AboutPage = () => {
 
   return (
     <MotionWrapper>
-      <h1 className="text-6xl font-black mb-6">About me.</h1>
+      <HeaderTitle text="About me" bottomSpace />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {pageParagraphs}
       </div>

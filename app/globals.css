@@ -68,6 +68,11 @@
   src: url("../fonts/Poppins-Regular.ttf") format("truetype");
 }
 
+img {
+  width: auto;
+  height: auto;
+}
+
 h1,
 h2,
 h3 {

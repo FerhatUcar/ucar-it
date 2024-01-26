@@ -34,7 +34,7 @@ type FieldType = {
 const iconMap = {
   name: <UserRound size={16} color={baseColor} />,
   email: <LucideMail size={16} color={baseColor} />,
-  subject: <GanttChart size={16} color={baseColor} />,
+  subject: <GanttChart size={18} color={baseColor} />,
   message: <MessageCircle size={16} color={baseColor} />,
 };
 

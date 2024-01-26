@@ -14,13 +14,20 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { wait } from "next/dist/lib/wait";
-import { AlertCircle } from "lucide-react";
+import {
+  AlertCircle,
+  Facebook,
+  Github,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { generateCaptcha } from "@/utils/captcha";
 import { baseColor } from "@/app/const";
 import dynamic from "next/dynamic";
 import HeaderTitle from "@/components/custom/header";
-import { contactDetails } from "@/data/data";
+import { contactDetails, socialMedia } from "@/data/data";
+import Link from "next/link";
 
 const Captcha = dynamic(() => import("@/components/custom/captcha"), {
   ssr: false,
@@ -33,11 +40,9 @@ const formSchema = z.object({
     message: "Name must be at least 3 characters.",
   }),
   email: z.string().email(),
-  subject: z
-    .string()
-    .refine((value) => selectFieldSubjects.includes(value), {
-      message: "Select a subject",
-    }),
+  subject: z.string().refine((value) => selectFieldSubjects.includes(value), {
+    message: "Select a subject",
+  }),
   message: z.string().min(1, {
     message: "Message can't be empty",
   }),
@@ -136,10 +141,10 @@ const ContactPage = () => {
           </Form>
         </Card>
         <Card className="bg-stone-950/50 shadow mt-4">
-          <CardHeader className="flex flex-row items-center uppercase">
+          <CardHeader className="uppercase pb-3">
             Information
           </CardHeader>
-          <CardContent>
+          <CardContent className="pb-0">
             {contactDetails.map((detail) => (
               <div
                 key={detail.text}
@@ -148,6 +153,18 @@ const ContactPage = () => {
                 <detail.icon size={16} color={baseColor} />
                 <span>{detail.text}</span>
               </div>
+            ))}
+          </CardContent>
+          <CardHeader className="uppercase pb-2">
+            Lets connect
+          </CardHeader>
+          <CardContent className="pb-0 flex justify-center">
+            {socialMedia.map((social) => (
+              <Button size="icon" variant="ghost" key={social.link}>
+                <Link target="_blank" href={social.link}>
+                  <social.icon size={16} color={baseColor} />
+                </Link>
+              </Button>
             ))}
           </CardContent>
         </Card>

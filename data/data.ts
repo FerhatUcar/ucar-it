@@ -6,7 +6,11 @@ import {
   CameraIcon,
   CircleUserRound,
   Coffee,
+  Facebook,
+  Github,
   Home,
+  Instagram,
+  Linkedin,
   Mail,
   MapPin,
   NotebookText,
@@ -252,5 +256,24 @@ export const workInformation = [
       "& Adobe Illustrator. Mail‑chimp expert and testing newsletters with Litmus.",
     stack:
       "Stack: HTML, SCSS, DNN, ASP.NET, JS, jQuery, AngularJS, GSAP Tweenlite, Bootstraps SASS, Compass, Bourbon, Adobe Photoshop, Adobe Illustrator & MailChimp",
+  },
+];
+
+export const socialMedia = [
+  {
+    link: "https://www.linkedin.com/in/ferhat-ucar-bb435283/",
+    icon: Linkedin,
+  },
+  {
+    link: "https://github.com/FerhatUcar",
+    icon: Github,
+  },
+  {
+    link: "https://www.instagram.com/ferrygraphy/",
+    icon: Instagram,
+  },
+  {
+    link: "https://www.facebook.com/ferhat.ucar.710/",
+    icon: Facebook,
   },
 ];

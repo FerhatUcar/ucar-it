@@ -7,7 +7,7 @@ const HeaderTitle = ({
   text: string;
   bottomSpace?: boolean;
 }) => (
-  <h1 className={`text-6xl font-black ${bottomSpace && "mb-6"}`}>
+  <h1 className={`text-4xl md:text-6xl font-black ${bottomSpace && "mb-6"}`}>
     {text}
     <span className="text-rose-600">.</span>
   </h1>

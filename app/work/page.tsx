@@ -58,7 +58,7 @@ const WorkPage = () => {
           <div className="flex">
             <div className="flex flex-col min-w-32"></div>
             <Button
-              className="mt-3 w-full transition-all hover:translate-y-[-3px] lg:mr-0 mr-6"
+              className="mt-3 w-full transition-all lg:mr-0 mr-6"
               onClick={handleLoadMore}
             >
               Load More

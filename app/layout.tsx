@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import NavigationSidebar from "@/components/navigation/navigation-sidebar";
 
 import "./globals.css";
+import MobileNavigation from "@/components/navigation/mobile-navigation";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: any }) {
           storageKey="ucar-it"
         >
           <NavigationSidebar />
+          <MobileNavigation />
           {children}
         </ThemeProvider>
       </body>

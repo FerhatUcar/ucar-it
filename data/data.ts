@@ -1,8 +1,12 @@
 import {
+  BarChart2,
   BookOpenIcon,
+  Briefcase,
   Building,
   CameraIcon,
+  CircleUserRound,
   Coffee,
+  Home,
   Mail,
   MapPin,
   NotebookText,
@@ -12,7 +16,6 @@ import {
   TrendingUpIcon,
   UserRound,
 } from "lucide-react";
-import { baseColor } from "@/app/const";
 
 export const contactDetails = [
   {
@@ -35,6 +38,14 @@ export const contactDetails = [
     icon: NotebookText,
     text: "KVK 94029023",
   },
+];
+
+export const links = [
+  { label: "Home", href: "/", icon: Home },
+  { label: "About", href: "/about", icon: CircleUserRound },
+  { label: "Work", href: "/work", icon: Briefcase },
+  { label: "Skills", href: "/skills", icon: BarChart2 },
+  { label: "Contact", href: "/contact", icon: Phone },
 ];
 
 export const AboutParagraphs = [

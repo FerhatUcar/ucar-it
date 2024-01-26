@@ -2,6 +2,7 @@ import Image from "next/image";
 import { MotionWrapper } from "@/components/motion-wrapper";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import HeaderTitle from "@/components/custom/header";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         width="145"
         height="129"
       />
-      <h1 className="text-6xl font-black">I am Ferhat Ucar</h1>
+      <HeaderTitle text="I am Ferhat Ucar" />
       <h2 className="text-2xl font-bold">Software Engineer</h2>
       <div className="flex gap-2 justify-between mt-3">
         <Button>

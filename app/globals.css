@@ -91,6 +91,14 @@ p {
   fill: transparent;
 }
 
+.homepage {
+  background-image: url('../public/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .spinner {
   animation: rotate 2s linear infinite;
   width: 20px;

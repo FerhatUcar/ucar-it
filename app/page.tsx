@@ -1,10 +1,28 @@
+"use client";
+
 import Image from "next/image";
 import { MotionWrapper } from "@/components/motion-wrapper";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import HeaderTitle from "@/components/custom/header";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const pathName = usePathname();
+
+  useEffect(() => {
+    if (pathName === "/") {
+      document.body.classList.add("homepage");
+    } else {
+      document.body.classList.remove("homepage");
+    }
+
+    return () => {
+      document.body.classList.remove("homepage");
+    };
+  }, [pathName]);
+
   return (
     <MotionWrapper>
       <Image

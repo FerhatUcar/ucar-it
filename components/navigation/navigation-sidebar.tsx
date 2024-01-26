@@ -10,9 +10,9 @@ const NavigationSidebar = () => {
   const pathName = usePathname();
 
   return (
-    <div className="mx-8 hidden md:flex py-1.5 absolute rounded-lg flex-col w-[50px] items-center text-primary translate-y-2/4 dark:bg-[#1E1F22] bg-gray-100">
+    <div className="bg-stone-950/50 mx-8 hidden md:flex py-1.5 absolute rounded-lg flex-col w-[50px] items-center text-primary translate-y-2/4">
       {links.map((link, index) => (
-        <Link key={index} href={link.href}>
+        <Link key={index} href={link.href} className="pb-1 last:pb-0">
           <Button
             key={index}
             className="py-6"

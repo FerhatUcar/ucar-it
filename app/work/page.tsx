@@ -14,7 +14,7 @@ import { workInformation } from "@/data/data";
 import { Button } from "@/components/ui/button";
 import useHandleMore from "@/hooks/useHandleMore";
 import HeaderTitle from "@/components/custom/header";
-import TimeLine from "@/components/custom/timeline";
+import { TimeLine } from "@/components/custom/timeline";
 
 const WorkPage = () => {
   const initialData = workInformation.slice(0, 3);
@@ -28,9 +28,15 @@ const WorkPage = () => {
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mr-6">
+        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6">
           <CardHeader className="text-gray-700">
-            <CardTitle className="dark:text-white">{p.company}</CardTitle>
+            <CardTitle className="text-white flex flex-row justify-between">
+              <span className="text-xl md:text-3xl">{p.company}</span>
+              <div className="md:hidden text-xs rounded-md bg-rose-800 p-2 flex flex-col text-center">
+                <span>{p.date}</span>
+                {p.months && <span>{p.months}</span>}
+              </div>
+            </CardTitle>
             <CardDescription>
               {p.place} | <span className="text-rose-400">{p.title}</span>
             </CardDescription>
@@ -56,9 +62,9 @@ const WorkPage = () => {
         {pageParagraphs}
         {!hideButton && (
           <div className="flex">
-            <div className="flex flex-col min-w-32"></div>
+            <div className="hidden lg:flex flex-col min-w-32"></div>
             <Button
-              className="mt-3 w-full transition-all lg:mr-0 mr-6"
+              className="mt-3 mx-6 mb-6 w-full transition-all lg:mr-0 mr-6"
               onClick={handleLoadMore}
             >
               Load More

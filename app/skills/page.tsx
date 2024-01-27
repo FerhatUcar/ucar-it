@@ -43,6 +43,12 @@ const headers = [
     percents: 98,
   },
   {
+    title: "ShadCN",
+    src: "/shadcn.png",
+    percents: 99,
+    logoWidth: 30
+  },
+  {
     title: "Prisma",
     src: "/prisma.png",
     percents: 78,
@@ -68,6 +74,23 @@ const headers = [
     title: "Cypress",
     src: "/cypress.png",
     percents: 83,
+  },
+  {
+    title: "Azure Devops",
+    src: "/azure.png",
+    percents: 43,
+    logoWidth: 40,
+  },
+  {
+    title: "AWS",
+    src: "/aws.png",
+    percents: 30,
+    logoWidth: 40,
+  },
+  {
+    title: "Cordova",
+    src: "/cordova.png",
+    percents: 88,
   },
 ];
 

@@ -69,6 +69,7 @@ export const AboutParagraphs = [
     title: "Photographer.",
     desc: "Wanderlens",
     icon: CameraIcon,
+    links: true,
     text: "In addition to their role as a software engineer, Ferhat wears multiple hats, including that of a skilled photographer and videographer. With proficiency in image editors such as Photoshop, Illustrator, and InDesign, they bring a creative touch to their projects, whether it’s designing user interfaces or capturing captivating moments through the lens.",
   },
   {

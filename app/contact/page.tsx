@@ -14,13 +14,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { wait } from "next/dist/lib/wait";
-import {
-  AlertCircle,
-  Facebook,
-  Github,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { generateCaptcha } from "@/utils/captcha";
 import { baseColor } from "@/app/const";
@@ -141,9 +135,7 @@ const ContactPage = () => {
           </Form>
         </Card>
         <Card className="bg-stone-950/50 shadow mt-4">
-          <CardHeader className="uppercase pb-3">
-            Information
-          </CardHeader>
+          <CardHeader className="uppercase pb-3">Information</CardHeader>
           <CardContent className="pb-0">
             {contactDetails.map((detail) => (
               <div
@@ -155,9 +147,7 @@ const ContactPage = () => {
               </div>
             ))}
           </CardContent>
-          <CardHeader className="uppercase pb-2">
-            Lets connect
-          </CardHeader>
+          <CardHeader className="uppercase pb-2">Lets connect</CardHeader>
           <CardContent className="pb-0 flex justify-center">
             {socialMedia.map((social) => (
               <Button size="icon" variant="ghost" key={social.link}>

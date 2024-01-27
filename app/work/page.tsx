@@ -28,7 +28,7 @@ const WorkPage = () => {
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6">
+        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 last:mb-6">
           <CardHeader className="text-gray-700">
             <CardTitle className="text-white flex flex-row justify-between">
               <span className="text-xl md:text-3xl">{p.company}</span>

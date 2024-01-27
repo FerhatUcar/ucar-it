@@ -134,7 +134,7 @@ const ContactPage = () => {
             </form>
           </Form>
         </Card>
-        <Card className="bg-stone-950/50 shadow mt-4">
+        <Card className="bg-stone-950/50 shadow my-4">
           <CardHeader className="uppercase pb-3">Information</CardHeader>
           <CardContent className="pb-0">
             {contactDetails.map((detail) => (

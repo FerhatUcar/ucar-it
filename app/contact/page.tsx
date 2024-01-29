@@ -13,7 +13,6 @@ import { Form } from "@/components/ui/form";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { wait } from "next/dist/lib/wait";
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { generateCaptcha } from "@/utils/captcha";
@@ -68,9 +67,7 @@ const ContactPage = () => {
         setUserInput("");
         setSubmitting(true);
 
-        await wait(2000);
-
-        // await axios.post("/api/contact", values);
+        await axios.post("/api/contact", values);
 
         router.push("/thank");
         router.refresh();

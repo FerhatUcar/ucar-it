@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import useHandleMore from "@/hooks/useHandleMore";
 import HeaderTitle from "@/components/custom/header";
 import { TimeLine } from "@/components/custom/timeline";
+import {Download} from "lucide-react";
 
 const WorkPage = () => {
   const initialData = workInformation.slice(0, 3);
@@ -28,7 +29,7 @@ const WorkPage = () => {
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="dark:bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 last:mb-6">
+        <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 last:mb-6">
           <CardHeader className="text-gray-700">
             <CardTitle className="text-white flex flex-row justify-between">
               <span className="text-xl md:text-3xl">{p.company}</span>
@@ -55,10 +56,19 @@ const WorkPage = () => {
     </div>
   ));
 
+  const handleDownload = () => window.open("CV-2024-black.pdf", "_blank");
+
   return (
     <MotionWrapper>
       <HeaderTitle text="Work Experience" bottomSpace />
       <div className="grid grid-cols-1 gap-4">
+        <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 p-3 flex flex-col gap-4">
+          <span>Want to read this on a PDF file?</span>
+          <Button onClick={handleDownload} className="w-full md:w-[200px] flex flex-row gap-2 items-center">
+            <Download size={18} />
+            <span>Download CV</span>
+          </Button>
+        </Card>
         {pageParagraphs}
         {!hideButton && (
           <div className="flex">

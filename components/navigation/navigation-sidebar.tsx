@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { links } from "@/data/data";
+import {baseColor} from "@/app/const";
 
 const NavigationSidebar = () => {
   const pathName = usePathname();
@@ -19,7 +20,7 @@ const NavigationSidebar = () => {
             variant={link.href === pathName ? "outline" : "ghost"}
             size="icon"
           >
-            <link.icon />
+            <link.icon color={link.href === pathName ? "#FFF" : baseColor} />
           </Button>
         </Link>
       ))}

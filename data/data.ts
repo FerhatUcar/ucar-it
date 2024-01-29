@@ -1,5 +1,6 @@
 import {
   BarChart2,
+  BetweenHorizonalEndIcon,
   BookOpenIcon,
   Briefcase,
   Building,
@@ -10,10 +11,12 @@ import {
   Github,
   Home,
   Instagram,
+  Laptop,
   Linkedin,
   Mail,
   MapPin,
   NotebookText,
+  Pencil,
   Phone,
   Pizza,
   Plane,
@@ -58,7 +61,7 @@ export const AboutParagraphs = [
     desc: "Who am I",
     icon: UserRound,
     text: "Meet Ferhat, a dynamic individual with a passion for technology, creativity, and a diverse set of skills that make them stand out in both the software development and design realms. As aseasoned software engineer and designer, Ferhat thrives on the ever-evolving landscape of technology",
-    image: "/portrait.jpg"
+    image: "/portrait.jpg",
   },
   {
     title: "Trend.",
@@ -78,7 +81,7 @@ export const AboutParagraphs = [
     desc: "Stay and wander",
     icon: Plane,
     text: "Beyond the digital realm, Ferhat is a globetrotter who finds inspiration in diverse cultures and landscapes. Their role as a photographer allows them to combine their love for technology with a passion for visual storytelling, while video editing further enhances their ability to convey compelling narratives.",
-    image: "/travel.jpg"
+    image: "/travel.jpg",
   },
   {
     title: "Cooking.",
@@ -278,5 +281,36 @@ export const socialMedia = [
   {
     link: "https://www.facebook.com/ferhat.ucar.710/",
     icon: Facebook,
+  },
+];
+
+export const services = [
+  {
+    title: "UI/UX",
+    icon: Pencil,
+    text:
+      "As a seasoned web/software engineer, I specialize in creating\n" +
+      "seamless and intuitive user experiences through my expertise in\n" +
+      "UX/UI design. With a keen understanding of user behavior and a\n" +
+      "meticulous eye for design, I ensure that every interface I craft not\n" +
+      "only meets functional requirements but also delights users with an\n" +
+      "aesthetically pleasing and user-friendly design.",
+  },
+  {
+    title: "Front-end Engineering",
+    icon: Laptop,
+    text:
+      "In the realm of front-end engineering, I excel in developing dynamic and responsive user interfaces that bring designs to life. " +
+      "Proficient in modern front-end technologies such as HTML, CSS, and JavaScript frameworks, " +
+      "I leverage my coding skills to optimize performance, enhance interactivity, and deliver engaging web applications that meet both client and user expectations.",
+  },
+  {
+    title: "Back-end Engineering",
+    icon: BetweenHorizonalEndIcon,
+    text:
+      "As a back-end engineer, I specialize in architecting robust and scalable server-side solutions to power web and software applications. " +
+      "With expertise in backend languages like Node.js, Nest.js, or Python, " +
+      "I design and implement efficient databases, APIs, and server logic to ensure the seamless functioning of applications, " +
+      "emphasizing reliability, security, and optimal performance.",
   },
 ];

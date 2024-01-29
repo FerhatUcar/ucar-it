@@ -52,11 +52,13 @@ const ContactPage = () => {
       message: "",
     },
   });
-  const [error, setError] = useState("");
-  const [isSubmitting, setSubmitting] = useState(false);
+  const [formState, setFormState] = useState({
+    error: "",
+    isSubmitting: false,
+    shouldShake: false,
+  });
+  const [userInput, setUserInput] = useState("",)
   const [captchaValue, setCaptchaValue] = useState(generateCaptcha());
-  const [userInput, setUserInput] = useState("");
-  const [shouldShake, setShouldShake] = useState(false);
 
   const inputCorrect = userInput === eval(captchaValue).toString();
 
@@ -65,20 +67,34 @@ const ContactPage = () => {
       if (inputCorrect) {
         setCaptchaValue(generateCaptcha());
         setUserInput("");
-        setSubmitting(true);
+        setFormState({
+          ...formState,
+          isSubmitting: true,
+        });
 
         await axios.post("/api/contact", values);
 
         router.push("/thank");
         router.refresh();
       } else {
-        setShouldShake(true);
-        setError("Please solve the captcha correctly.");
-        setTimeout(() => setShouldShake(false), 500);
+        setFormState({
+          ...formState,
+          shouldShake: true,
+          error: "Please solve the captcha correctly.",
+        });
+        setTimeout(() => {
+          setFormState({
+            ...formState,
+            shouldShake: false,
+          });
+        }, 500);
       }
     } catch (error) {
-      setSubmitting(false);
-      setError("An unexpected error occurred.");
+      setFormState({
+        ...formState,
+        error: "An unexpected error occurred.",
+        isSubmitting: false,
+      });
     }
   };
 
@@ -87,11 +103,11 @@ const ContactPage = () => {
       <HeaderTitle text="Lets chats" />
       <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full px-4 lg:px-0">
         <Card className="bg-stone-950/50 shadow lg:col-span-3 p-6 mt-4">
-          {error && (
-            <Alert className={`mb-4 ${shouldShake && "shake"}`}>
+          {formState.error && (
+            <Alert className={`mb-4 ${formState && "shake"}`}>
               <AlertCircle className="h-4 w-4" color={baseColor} />
               <AlertTitle>Oops..</AlertTitle>
-              <AlertDescription>{error}</AlertDescription>
+              <AlertDescription>{formState.error}</AlertDescription>
             </Alert>
           )}
           <Form {...form}>
@@ -108,9 +124,9 @@ const ContactPage = () => {
               <Button
                 className="m-0 w-full md:w-[150px] float-right"
                 type="submit"
-                disabled={isSubmitting}
+                disabled={formState.isSubmitting}
               >
-                {isSubmitting ? (
+                {formState.isSubmitting ? (
                   <span className="flex flex-row">
                     <svg className="spinner mr-3" viewBox="0 0 50 50">
                       <circle

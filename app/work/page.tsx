@@ -62,7 +62,7 @@ const WorkPage = () => {
     <MotionWrapper>
       <HeaderTitle text="Work Experience" bottomSpace />
       <div className="grid grid-cols-1 gap-4">
-        <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 p-3 flex flex-col gap-4">
+        <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 p-3 flex items-center gap-4 flex-col md:justify-between md:flex-row">
           <span>Want to read this on a PDF file?</span>
           <Button onClick={handleDownload} className="w-full md:w-[200px] flex flex-row gap-2 items-center">
             <Download size={18} />

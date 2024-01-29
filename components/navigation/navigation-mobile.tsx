@@ -27,7 +27,7 @@ const NavigationMobile = () => {
     <div className="md:hidden flex flex-row items-center justify-between bg-neutral-950 w-full h-14">
       <div className="flex flex-row items-center gap-2 pl-4">
         <Image
-          src="/ferry.jpg"
+          src="/portrait.jpg"
           className="rounded-full border-solid border-white"
           alt="ferry"
           width="25"

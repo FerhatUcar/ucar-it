@@ -58,6 +58,7 @@ export const AboutParagraphs = [
     desc: "Who am I",
     icon: UserRound,
     text: "Meet Ferhat, a dynamic individual with a passion for technology, creativity, and a diverse set of skills that make them stand out in both the software development and design realms. As aseasoned software engineer and designer, Ferhat thrives on the ever-evolving landscape of technology",
+    image: "/portrait.jpg"
   },
   {
     title: "Trend.",

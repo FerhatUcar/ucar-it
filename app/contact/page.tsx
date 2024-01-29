@@ -148,7 +148,7 @@ const ContactPage = () => {
             ))}
           </CardContent>
           <CardHeader className="uppercase pb-2">Lets connect</CardHeader>
-          <CardContent className="pb-0 flex justify-center">
+          <CardContent className="mb:pb-0 flex lg:justify-center pb-3">
             {socialMedia.map((social) => (
               <Button size="icon" variant="ghost" key={social.link}>
                 <Link target="_blank" href={social.link}>

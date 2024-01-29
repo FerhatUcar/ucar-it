@@ -13,6 +13,7 @@ import HeaderTitle from "@/components/custom/header";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Instagram, Link as WebLink } from "lucide-react";
+import Image from "next/image";
 
 const AboutPage = () => {
   const pageParagraphs = AboutParagraphs.map((p, i) => (
@@ -24,7 +25,18 @@ const AboutPage = () => {
           <CardDescription>{p.desc}</CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="text-gray-400">
+      <CardContent
+        className={`text-gray-400 ${p.image && "flex flex-col md:mr-4 md:flex-row gap-2"}`}
+      >
+        {p.image && (
+          <Image
+            src="/portrait.jpg"
+            className="mx-auto md:mr-4 w-32 h-32 rounded-full border-solid border-4 border-white"
+            alt="ferry"
+            width="120"
+            height="160"
+          />
+        )}
         <p>{p.text}</p>
       </CardContent>
       {p.links && (

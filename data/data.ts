@@ -78,6 +78,7 @@ export const AboutParagraphs = [
     desc: "Stay and wander",
     icon: Plane,
     text: "Beyond the digital realm, Ferhat is a globetrotter who finds inspiration in diverse cultures and landscapes. Their role as a photographer allows them to combine their love for technology with a passion for visual storytelling, while video editing further enhances their ability to convey compelling narratives.",
+    image: "/travel.jpg"
   },
   {
     title: "Cooking.",

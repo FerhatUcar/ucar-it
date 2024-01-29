@@ -30,9 +30,9 @@ const AboutPage = () => {
       >
         {p.image && (
           <Image
-            src="/portrait.jpg"
+            src={p.image}
             className="mx-auto md:mr-4 w-32 h-32 rounded-full border-solid border-4 border-white"
-            alt="ferry"
+            alt={p.title}
             width="120"
             height="160"
           />

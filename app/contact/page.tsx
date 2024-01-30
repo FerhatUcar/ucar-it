@@ -122,7 +122,7 @@ const ContactPage = () => {
                 setUserInput={setUserInput}
               />
               <Button
-                className="m-0 w-full md:w-[150px] float-right"
+                className="m-0 w-full md:w-[150px] float-right bg-rose-600 hover:bg-rose-800"
                 type="submit"
                 disabled={formState.isSubmitting}
               >
@@ -163,7 +163,7 @@ const ContactPage = () => {
           <CardHeader className="uppercase pb-2">Lets connect</CardHeader>
           <CardContent className="mb:pb-0 flex lg:justify-center pb-3">
             {socialMedia.map((social) => (
-              <Button size="icon" variant="ghost" key={social.link}>
+              <Button size="icon" variant="ghost" key={social.link} className="hover:bg-zinc-800">
                 <Link target="_blank" href={social.link}>
                   <social.icon size={16} color={baseColor} />
                 </Link>

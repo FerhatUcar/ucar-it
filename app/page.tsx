@@ -20,10 +20,10 @@ export default function Home() {
       <HeaderTitle text="I am Ferhat Ucar" />
       <h2 className="text-2xl font-bold text-gray-400">Software Engineer</h2>
       <div className="flex gap-2 justify-between mt-3 mb-6">
-        <Button className="bg-rose-600">
+        <Button className="bg-rose-600 hover:bg-rose-800">
           <Link href="/contact">Book me</Link>
         </Button>
-        <Button variant="secondary">
+        <Button className="bg-zinc-800 hover:bg-zinc-700">
           <Link href="/about">About me</Link>
         </Button>
       </div>

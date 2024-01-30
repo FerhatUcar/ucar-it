@@ -16,7 +16,7 @@ const NavigationSidebar = () => {
         <Link key={index} href={link.href} className="pb-1 last:pb-0">
           <Button
             key={index}
-            className="py-6"
+            className="py-6 hover:bg-zinc-900"
             variant={link.href === pathName ? "outline" : "ghost"}
             size="icon"
           >

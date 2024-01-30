@@ -22,7 +22,7 @@ const AboutPage = () => {
         <p.icon color={baseColor} />
         <div className="text-gray-700">
           <CardTitle className="text-white">{p.title}</CardTitle>
-          <CardDescription>{p.desc}</CardDescription>
+          <CardDescription className="text-gray-400">{p.desc}</CardDescription>
         </div>
       </CardHeader>
       <CardContent

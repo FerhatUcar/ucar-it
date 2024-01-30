@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import useHandleMore from "@/hooks/useHandleMore";
 import HeaderTitle from "@/components/custom/header";
 import { TimeLine } from "@/components/custom/timeline";
-import {Download} from "lucide-react";
+import { Download } from "lucide-react";
 
 const WorkPage = () => {
   const initialData = workInformation.slice(0, 3);
@@ -39,7 +39,8 @@ const WorkPage = () => {
               </div>
             </CardTitle>
             <CardDescription>
-              {p.place} | <span className="text-rose-400">{p.title}</span>
+              <span className="text-zinc-300">{p.place} |</span>{" "}
+              <span className="text-rose-400">{p.title}</span>
             </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col text-gray-400 space-y-2">
@@ -64,7 +65,10 @@ const WorkPage = () => {
       <div className="grid grid-cols-1 gap-4">
         <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 p-3 flex items-center gap-4 flex-col md:justify-between md:flex-row">
           <span>Want to read this on a PDF file?</span>
-          <Button onClick={handleDownload} className="w-full md:w-[200px] flex flex-row gap-2 items-center">
+          <Button
+            onClick={handleDownload}
+            className="w-full md:w-[200px] flex flex-row gap-2 items-center bg-rose-600 hover:bg-rose-800"
+          >
             <Download size={18} />
             <span>Download CV</span>
           </Button>

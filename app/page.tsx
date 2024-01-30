@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { MotionWrapper } from "@/components/motion-wrapper";
-import { Button } from "@/components/ui/button";
+import { Button as ButtonUI } from "@/components/ui/button";
 import Link from "next/link";
 import HeaderTitle from "@/components/custom/header";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -20,12 +20,12 @@ export default function Home() {
       <HeaderTitle text="I am Ferhat Ucar" />
       <h2 className="text-2xl font-bold text-gray-400">Software Engineer</h2>
       <div className="flex gap-2 justify-between mt-3 mb-6">
-        <Button>
+        <ButtonUI>
           <Link href="/contact">Book me</Link>
-        </Button>
-        <Button variant="secondary">
+        </ButtonUI>
+        <ButtonUI variant="secondary">
           <Link href="/about">About me</Link>
-        </Button>
+        </ButtonUI>
       </div>
       <div className="my-6">
         <Card className="bg-stone-950/50 shadow p-3 m-4 mb:m-0">

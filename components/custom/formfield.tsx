@@ -62,9 +62,9 @@ const renderField = (
               <SelectValue placeholder="Select a subject" />
             </SelectTrigger>
           </FormControl>
-          <SelectContent>
+          <SelectContent className="bg-neutral-800">
             {selectFieldSubjects.map((sub) => (
-              <SelectItem key={sub} value={sub}>
+              <SelectItem key={sub} value={sub} className="focus:bg-zinc-700 transition">
                 {sub}
               </SelectItem>
             ))}

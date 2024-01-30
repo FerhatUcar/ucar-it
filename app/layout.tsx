@@ -3,7 +3,7 @@ import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import NavigationSidebar from "@/components/navigation/navigation-sidebar";
 
-import "./globals.css";
+import "../styles/globals.css";
 import NavigationMobile from "@/components/navigation/navigation-mobile";
 
 const font = Open_Sans({ subsets: ["latin"] });

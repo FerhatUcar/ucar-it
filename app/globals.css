@@ -50,6 +50,9 @@
 }
 
 @layer base {
+  .bg-background {
+    background: hsl(10 2.3% 10.1%);
+  }
   * {
     @apply border-solid border-zinc-800;
   }

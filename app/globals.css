@@ -49,6 +49,13 @@
   }
 }
 
+@layer components {
+  .border-border {}
+  .bg-background {}
+  .text-foreground {}
+}
+
+
 @layer base {
   * {
     @apply border-border;

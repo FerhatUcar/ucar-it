@@ -49,16 +49,9 @@
   }
 }
 
-@layer components {
-  .border-border {}
-  .bg-background {}
-  .text-foreground {}
-}
-
-
 @layer base {
   * {
-    @apply border-border;
+    @apply border-solid border-zinc-800;
   }
   body {
     @apply bg-background text-foreground;

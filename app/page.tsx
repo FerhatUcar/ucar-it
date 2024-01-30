@@ -7,8 +7,6 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { services } from "@/data/data";
 import { baseColor } from "@/app/const";
 
-import "tailwindcss/tailwind.css"
-
 export default function Home() {
   return (
     <MotionWrapper>

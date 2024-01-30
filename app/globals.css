@@ -54,7 +54,7 @@
     @apply border-solid border-zinc-800;
   }
   body {
-    @apply bg-zinc-900 text-foreground;
+    @apply bg-zinc-900;
   }
 }
 

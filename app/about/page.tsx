@@ -41,7 +41,7 @@ const AboutPage = () => {
       </CardContent>
       {p.links && (
         <CardFooter className="flex flex-row gap-2">
-          <Button>
+          <Button className="bg-rose-600 hover:bg-rose-800">
             <Link
               className="flex flex-row gap-2 items-center"
               target="_blank"
@@ -51,7 +51,7 @@ const AboutPage = () => {
               <span>Instagram</span>
             </Link>
           </Button>
-          <Button variant="secondary">
+          <Button variant="secondary" className="bg-zinc-800 hover:bg-zinc-700">
             <Link
               className="flex flex-row gap-2 items-center"
               target="_blank"

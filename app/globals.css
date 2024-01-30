@@ -54,7 +54,7 @@
     @apply border-solid border-zinc-800;
   }
   body {
-    @apply bg-zinc-900;
+    @apply bg-zinc-900 bg-background;
   }
 }
 
@@ -66,11 +66,6 @@
 @font-face {
   font-family: "ParagraphFont";
   src: url("../fonts/Poppins-Regular.ttf") format("truetype");
-}
-
-img {
-  width: auto;
-  height: auto;
 }
 
 h1,
@@ -89,14 +84,6 @@ p {
   stroke-width: 10px;
   stroke-linecap: round;
   fill: transparent;
-}
-
-.homepage {
-  background-image: url('../public/bg2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
 }
 
 .spinner {

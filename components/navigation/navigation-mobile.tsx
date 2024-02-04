@@ -10,7 +10,7 @@ import { CloseIcon } from "next/dist/client/components/react-dev-overlay/interna
 import { wait } from "next/dist/lib/wait";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {baseColor} from "@/app/const";
+import { baseColor } from "@/app/const";
 
 const NavigationMobile = () => {
   const pathName = usePathname();
@@ -21,6 +21,14 @@ const NavigationMobile = () => {
   const handleMenuItem = async () => {
     await wait(250);
     handleMenu();
+  };
+
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
   };
 
   return (
@@ -37,7 +45,11 @@ const NavigationMobile = () => {
           Ucar IT<span className="text-rose-600">.</span>
         </h2>
       </div>
-      <Button variant="ghost" className="absolute right-1 top-2" onClick={handleMenu}>
+      <Button
+        variant="ghost"
+        className="absolute right-1 top-2"
+        onClick={handleMenu}
+      >
         <Menu />
       </Button>
       {open && (
@@ -55,17 +67,19 @@ const NavigationMobile = () => {
               <CloseIcon />
             </Button>
             {links.map((link, index) => (
-              <Link key={index} href={link.href} onClick={handleMenuItem}>
-                <Button
-                  key={index}
-                  className="py-4 flex flex-row items-center gap-2 w-full h-32 hover:bg-neutral-700"
-                  variant={link.href === pathName ? "outline" : "ghost"}
-                  size="icon"
-                >
-                  <link.icon color={baseColor} />
-                  <h2 className="uppercase text-xl">{link.label}</h2>
-                </Button>
-              </Link>
+              <motion.li key={index} variants={item}>
+                <Link href={link.href} onClick={handleMenuItem}>
+                  <Button
+                    key={index}
+                    className="py-4 flex flex-row items-center gap-2 w-full h-32 hover:bg-neutral-700"
+                    variant={link.href === pathName ? "outline" : "ghost"}
+                    size="icon"
+                  >
+                    <link.icon color={baseColor} />
+                    <h2 className="uppercase text-xl">{link.label}</h2>
+                  </Button>
+                </Link>
+              </motion.li>
             ))}
           </div>
         </motion.div>

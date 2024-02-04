@@ -429,7 +429,7 @@ export const skills = [
   },
   {
     title: "Socket IO",
-    src: "/socket-io.png",
+    src: "/socket.png",
     percents: 38,
   },
 ];

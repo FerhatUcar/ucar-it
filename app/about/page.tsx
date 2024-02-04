@@ -37,7 +37,10 @@ const AboutPage = () => {
             height="160"
           />
         )}
-        <p>{p.text}</p>
+        <div>
+          <p>{p.text}</p>
+          {p.text2 && <p className="mt-3">{p.text2}</p>}
+        </div>
       </CardContent>
       {p.links && (
         <CardFooter className="flex flex-row gap-2">

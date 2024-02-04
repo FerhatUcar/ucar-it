@@ -78,7 +78,7 @@ const WorkPage = () => {
           <div className="flex">
             <div className="hidden lg:flex flex-col min-w-32"></div>
             <Button
-              className="mt-3 mx-6 mb-6 w-full transition-all lg:mr-0 mr-6"
+              className="mt-3 mx-6 mb-6 w-full transition-all lg:mr-0 mr-6 bg-rose-600 hover:bg-rose-800"
               onClick={handleLoadMore}
             >
               Load More

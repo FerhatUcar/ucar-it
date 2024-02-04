@@ -22,6 +22,7 @@ import {
   Plane,
   TrendingUpIcon,
   UserRound,
+  Wrench,
 } from "lucide-react";
 
 export const contactDetails = [
@@ -64,42 +65,50 @@ export const AboutParagraphs = [
     image: "/portrait.jpg",
   },
   {
+    title: "Engineering.",
+    desc: "What I do",
+    icon: Wrench,
+    text: "With over 10 years of experience as a Front-end Developer, I bring a wealth of expertise to SaaS, E-commerce, or similar product-oriented teams. My proficiency extends to a profound understanding of web and app development, coupled with a mastery of design systems. Collaboration is intrinsic to my work ethos; I derive satisfaction from guiding junior developers, actively participating in the hiring process, and welcoming like-minded future colleagues to the team.",
+    text2:
+      "My problem-solving abilities, grounded in strong analytical skills, allow me to swiftly identify and address complex issues. Additionally, I excel in time management, consistently meeting agreements and deadlines with precision.",
+  },
+  {
     title: "Trend.",
     desc: "Keeping up-to-date",
     icon: TrendingUpIcon,
-    text: "Their commitment to staying up-to-date with the latest trends and advancements ensures that their work is not only innovative but also at the forefront of industry standards. With a keen eye for detail and a knack for problem-solving, Ferhat crafts software solutions that seamlessly blend functionality and aesthetics.",
+    text: "My commitment to staying up-to-date with the latest trends and advancements ensures that my work is not only innovative but also at the forefront of industry standards. With a keen eye for detail and a knack for problem-solving, I craft software solutions that seamlessly blend functionality and aesthetics.",
   },
   {
     title: "Photographer.",
     desc: "Wanderlens",
     icon: CameraIcon,
     links: true,
-    text: "In addition to their role as a software engineer, Ferhat wears multiple hats, including that of a skilled photographer and videographer. With proficiency in image editors such as Photoshop, Illustrator, and InDesign, they bring a creative touch to their projects, whether it’s designing user interfaces or capturing captivating moments through the lens.",
+    text: "In addition to my role as a software engineer, I wear multiple hats, including that of a skilled photographer and videographer. With proficiency in image editors such as Photoshop, Illustrator, and InDesign, I bring a creative touch to their projects, whether it’s designing user interfaces or capturing captivating moments through the lens.",
   },
   {
     title: "Traveller.",
     desc: "Stay and wander",
     icon: Plane,
-    text: "Beyond the digital realm, Ferhat is a globetrotter who finds inspiration in diverse cultures and landscapes. Their role as a photographer allows them to combine their love for technology with a passion for visual storytelling, while video editing further enhances their ability to convey compelling narratives.",
+    text: "Beyond the digital realm, I am a globetrotter who finds inspiration in diverse cultures and landscapes. My role as a photographer allows them to combine their love for technology with a passion for visual storytelling, while video editing further enhances their ability to convey compelling narratives.",
     image: "/travel.jpg",
   },
   {
     title: "Cooking.",
     desc: "Love for food",
     icon: Pizza,
-    text: "Despite their busy professional life, Ferhat finds joy in culinary pursuits. A cooking enthusiast, they love experimenting with flavors and creating delicious meals. At home, they play the role of a loving parent to their daughter, balancing the demands of work and family with grace. An avid movie buff, Ferhat enjoys the immersive experience of watching films in theaters.",
+    text: "Despite my busy professional life, I find joy in culinary pursuits. A cooking enthusiast, I love experimenting with flavors and creating delicious meals. At home, I play the role of a loving parent to their daughter, balancing the demands of work and family with grace. An avid movie buff, I enjoy the immersive experience of watching films in theaters.",
   },
   {
     title: "Coffee.",
     desc: "Good beans",
     icon: Coffee,
-    text: "The combination of a compelling storyline and cinematic visuals is a source of relaxation and inspiration for them. And let’s not forget their love for coffee, which fuels their creative endeavors and adds an extra layer of enjoyment to each day.",
+    text: "The combination of a compelling storyline and cinematic visuals is a source of relaxation and inspiration for me. And let’s not forget my love for coffee, which fuels my creative endeavors and adds an extra layer of enjoyment to each day.",
   },
   {
     title: "This is Ferhat.",
     desc: "In summary",
     icon: BookOpenIcon,
-    text: "In summary, Ferhat is a multifaceted individual whose passion for technology, design, travel, and family enriches both their professional and personal life. Their journey is a testament to the harmonious blend of creativity and technical expertise, making them a truly unique and inspiring figure in the world of software engineering and design.",
+    text: "In summary, Ferhat is a multifaceted individual whose passion for technology, design, travel, and family enriches both my professional and personal life. My journey is a testament to the harmonious blend of creativity and technical expertise, makes me a truly unique and inspiring figure in the world of software engineering and design.",
   },
 ];
 
@@ -109,9 +118,9 @@ export const workInformation = [
     date: "2021-Now",
     place: "Tilburg",
     title: "Software Engineer",
-    text: "Discord Clone: I cloned Discord with NextJS, React and Tailwind CSS. You can register with a OAuth provider that is build with Clerk and NextAuth. The data is structured with Prisma and stored on PlanetScale. As an member or admin you can create servers and channels, where you can chat and video call with other members that is invited. SocketIO is used for that. I used Tailwind CSS and ShadCN to style the dashboard. The project is deployed with Vercel.",
+    text: "Discord Replica Project: Leveraging NextJS, React, and Tailwind CSS, I have successfully replicated the Discord platform. Registration is facilitated through OAuth providers, constructed with Clerk and NextAuth. Prisma structures and manages the data, which is securely stored on PlanetScale. As a member or administrator, you can establish servers and channels, enabling communication through chat and video calls with invited members. The real-time functionality is implemented using SocketIO. The project's dashboard is meticulously styled using Tailwind CSS and ShadCN. The deployment is executed seamlessly through Vercel.",
     text2:
-      "Issue Tracker: I created Jira-Like issue tracker web application. I used OAuth Google Provider where you can register as an user. You can create, edit or delete tickets and assign to other users. Tickets are structured with Prisma and stored in PlanetScale. I used Tailwind CSS and RadixUI to style the dashboard. The project is deployed with Vercel.",
+      "Issue Tracker Web Application: I have developed an issue tracker web application reminiscent of Jira. Utilizing the OAuth Google Provider, users can seamlessly register and engage with the platform. The application enables users to create, edit, or delete tickets, with the flexibility to assign them to other users. The ticket data is meticulously organized using Prisma and securely stored on PlanetScale. Styling for the intuitive dashboard is achieved through the use of Tailwind CSS and RadixUI. The project is efficiently deployed and hosted on Vercel.",
     stack:
       "Stack: HTML5, NextJS, TypeScript, React, Tailwind CSS, Recoil/Zustand, React hook forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
   },
@@ -120,9 +129,9 @@ export const workInformation = [
     date: "2021-2023",
     place: "Veldhoven",
     title: "Software Engineer",
-    text: "1 year: Worked on web-components with Storybook, styled‑components and React. In a agile team of 7 developers. Writing tests with react‑jest‑library and Enzyme. Writing e2e tests with Cypress. Planning is made through. Jira and the pipeline is used on BitBucket.",
+    text: "1 year: Contributed to web component development using Storybook, styled-components, and React within an agile team consisting of 7 developers. Demonstrated proficiency in test writing utilizing react-jest-library and Enzyme. Executed end-to-end testing with Cypress. Project planning was conducted through Jira, and version control was managed via BitBucket.",
     text2:
-      "1.5 year: After 1 year I was moved to a more complex team with members, where we transform data and put it into different types of graphs, that is build with React.",
+      "1.5 year: Transitioned to a more complex team after the first year, collaborating with team members to transform and visualize data through the construction of diverse graphs using React.",
     stack:
       "Stack: HTML5, Styled components, TypeScript, Immutable, Lodash, React, Redux & React hook forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
   },
@@ -312,5 +321,109 @@ export const services = [
       "With expertise in backend languages like Node.js, Nest.js, or Python, " +
       "I design and implement efficient databases, APIs, and server logic to ensure the seamless functioning of applications, " +
       "emphasizing reliability, security, and optimal performance.",
+  },
+];
+
+export const skills = [
+  {
+    title: "React",
+    src: "/react.png",
+    percents: 99,
+  },
+  {
+    title: "Angular",
+    src: "/angular.png",
+    percents: 70,
+  },
+  {
+    title: "Node.js",
+    src: "/node.png",
+    percents: 77,
+  },
+  {
+    title: "Python",
+    src: "/python.png",
+    percents: 35,
+  },
+  {
+    title: "TypeScript",
+    src: "/ts.png",
+    percents: 95,
+  },
+  {
+    title: "Next.js",
+    src: "/next.png",
+    percents: 90,
+  },
+  {
+    title: "Tailwind",
+    src: "/tailwind.png",
+    percents: 98,
+  },
+  {
+    title: "ShadCN",
+    src: "/shadcn.png",
+    percents: 99,
+    logoWidth: 30,
+  },
+  {
+    title: "Ionic",
+    src: "/ionic.png",
+    percents: 91,
+  },
+  {
+    title: "Prisma",
+    src: "/prisma.png",
+    percents: 78,
+  },
+  {
+    title: "Docker",
+    src: "/docker.png",
+    logoWidth: 50,
+    percents: 60,
+  },
+  {
+    title: "MySQL",
+    src: "/sql.png",
+    logoWidth: 50,
+    percents: 66,
+  },
+  {
+    title: "Echarts",
+    src: "/echarts.png",
+    percents: 95,
+  },
+  {
+    title: "Cypress",
+    src: "/cypress.png",
+    percents: 83,
+  },
+  {
+    title: "Azure Devops",
+    src: "/azure.png",
+    percents: 43,
+    logoWidth: 40,
+  },
+  {
+    title: "AWS",
+    src: "/aws.png",
+    percents: 30,
+    logoWidth: 40,
+  },
+  {
+    title: "Cordova",
+    src: "/cordova.png",
+    percents: 88,
+  },
+  {
+    title: "Sentry",
+    src: "/sentry.png",
+    percents: 67,
+  },
+  {
+    title: "Rabbit MQ",
+    src: "/rabbitmq.png",
+    percents: 44,
+    logoWidth: 25
   },
 ];

@@ -66,20 +66,17 @@ const NavigationMobile = () => {
             >
               <CloseIcon />
             </Button>
-            {links.map((link, index) => (
-              <motion.li key={index} variants={item}>
-                <Link href={link.href} onClick={handleMenuItem}>
-                  <Button
-                    key={index}
-                    className="py-4 flex flex-row items-center gap-2 w-full h-32 hover:bg-neutral-700"
-                    variant={link.href === pathName ? "outline" : "ghost"}
-                    size="icon"
-                  >
-                    <link.icon color={baseColor} />
-                    <h2 className="uppercase text-xl">{link.label}</h2>
-                  </Button>
-                </Link>
-              </motion.li>
+            {links.map((link) => (
+              <Link href={link.href} key={link.href} onClick={handleMenuItem}>
+                <Button
+                  className="py-4 flex flex-row items-center gap-2 w-full h-32 hover:bg-neutral-700"
+                  variant={link.href === pathName ? "outline" : "ghost"}
+                  size="icon"
+                >
+                  <link.icon color={baseColor} />
+                  <h2 className="uppercase text-xl">{link.label}</h2>
+                </Button>
+              </Link>
             ))}
           </div>
         </motion.div>

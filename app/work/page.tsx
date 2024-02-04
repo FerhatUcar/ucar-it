@@ -29,14 +29,10 @@ const WorkPage = () => {
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 last:mb-6">
+        <Card className="bg-stone-950/50 shadow lg:mr-0 mr-6 ml-3 md:mr-6 md:ml-0 last:mb-6">
           <CardHeader className="text-gray-700">
-            <CardTitle className="text-white flex flex-row justify-between">
+            <CardTitle className="text-white">
               <span className="text-xl md:text-3xl">{p.company}</span>
-              <div className="md:hidden text-xs rounded-md bg-rose-800 p-2 flex flex-col text-center">
-                <span>{p.date}</span>
-                {p.months && <span>{p.months}</span>}
-              </div>
             </CardTitle>
             <CardDescription>
               <span className="text-zinc-300">{p.place} |</span>{" "}

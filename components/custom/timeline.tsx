@@ -9,7 +9,7 @@ export const TimeLine = ({
   date: string;
   months: string | undefined;
 }) => (
-  <div className="hidden md:flex flex-col md:min-w-32">
+  <div className="flex flex-col ml-6 md:mx-0 md:min-w-32">
     <div className="text-xs mx-auto mb-2 rounded-md bg-gray-200 dark:bg-rose-800 p-2 flex flex-col text-center">
       <span>{date}</span>
       {months && <span>{months}</span>}

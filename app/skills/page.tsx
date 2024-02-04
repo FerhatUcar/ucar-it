@@ -11,17 +11,20 @@ const SkillsPage = () => (
   <MotionWrapper>
     <HeaderTitle text="Skills" bottomSpace />
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:w-auto w-full px-8">
-      {skills.map(({ src, title, percents, logoWidth }) => (
+      {skills.map(({ src, title, subtitle, percents, logoWidth }) => (
         <Card key={title} className="bg-stone-950/50 last:mb-6">
-          <CardHeader className="flex flex-row items-center gap-3 text-gray-700">
-            <CardTitle className="text-white flex items-center gap-2">
+          <CardHeader className="flex flex-row items-center text-gray-700">
+            <CardTitle className="text-white flex flex-row items-center gap-2">
               <Image
                 src={src}
                 alt={title}
                 width={logoWidth ?? "32"}
                 height="32"
               />
-              <span>{title}</span>
+              <div className="flex flex-col">
+                <span>{title}</span>
+                <span className="text-base">{subtitle}</span>
+              </div>
             </CardTitle>
           </CardHeader>
           <CardContent className="progress text-gray-400">

@@ -399,7 +399,8 @@ export const skills = [
     percents: 83,
   },
   {
-    title: "Azure Devops",
+    title: "Azure",
+    subtitle: "Devops",
     src: "/azure.png",
     percents: 43,
     logoWidth: 40,
@@ -425,5 +426,10 @@ export const skills = [
     src: "/rabbitmq.png",
     percents: 44,
     logoWidth: 25
+  },
+  {
+    title: "Socket IO",
+    src: "/socket-io.png",
+    percents: 38,
   },
 ];

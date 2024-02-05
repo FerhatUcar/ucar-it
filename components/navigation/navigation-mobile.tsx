@@ -23,14 +23,6 @@ const NavigationMobile = () => {
     handleMenu();
   };
 
-  const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-
   return (
     <div className="md:hidden flex flex-row items-center justify-between bg-neutral-950 w-full h-14">
       <div className="flex flex-row items-center gap-2 pl-4">
@@ -66,15 +58,15 @@ const NavigationMobile = () => {
             >
               <CloseIcon />
             </Button>
-            {links.map((link) => (
-              <Link href={link.href} key={link.href} onClick={handleMenuItem}>
+            {links.map(({ href, icon: Icon, label }) => (
+              <Link href={href} key={href} onClick={handleMenuItem}>
                 <Button
                   className="py-4 flex flex-row items-center gap-2 w-full h-32 hover:bg-neutral-700"
-                  variant={link.href === pathName ? "outline" : "ghost"}
+                  variant={href === pathName ? "outline" : "ghost"}
                   size="icon"
                 >
-                  <link.icon color={baseColor} />
-                  <h2 className="uppercase text-xl">{link.label}</h2>
+                  <Icon color={baseColor} />
+                  <h2 className="uppercase text-xl">{label}</h2>
                 </Button>
               </Link>
             ))}

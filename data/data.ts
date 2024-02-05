@@ -326,6 +326,18 @@ export const services = [
 
 export const skills = [
   {
+    title: "HTML",
+    src: "/html.png",
+    percents: 99,
+    logoWidth: 28
+  },
+  {
+    title: "CSS",
+    src: "/css.png",
+    percents: 99,
+    logoWidth: 28
+  },
+  {
     title: "React",
     src: "/react.png",
     percents: 99,

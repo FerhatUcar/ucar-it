@@ -10,9 +10,9 @@ import { skills } from "@/data/data";
 const SkillsPage = () => (
   <MotionWrapper>
     <HeaderTitle text="Skills" bottomSpace />
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:w-auto w-full px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:w-auto w-full px-8 pb-6">
       {skills.map(({ src, title, subtitle, percents, logoWidth }) => (
-        <Card key={title} className="bg-stone-950/50 last:mb-6">
+        <Card key={title} className="bg-stone-950/50">
           <CardHeader className="flex flex-row items-center text-gray-700">
             <CardTitle className="text-white flex flex-row items-center gap-2">
               <Image

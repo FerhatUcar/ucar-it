@@ -345,7 +345,7 @@ export const skills = [
   {
     title: "Angular",
     src: "/angular.png",
-    percents: 70,
+    percents: 80,
   },
   {
     title: "Node.js",
@@ -355,7 +355,7 @@ export const skills = [
   {
     title: "Python",
     src: "/python.png",
-    percents: 35,
+    percents: 40,
   },
   {
     title: "TypeScript",

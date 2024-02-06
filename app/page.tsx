@@ -30,20 +30,20 @@ export default function Home() {
       <div className="my-6">
         <Card className="bg-stone-950/50 shadow p-3 m-4 mb:m-0">
           <h2 className="text-3xl font-bold text-center">Services</h2>
+          <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2 m-4 mb:m-0">
+            {services.map((s) => (
+              <Card key={s.title} className="bg-stone-950 shadow">
+                <CardHeader className="flex flex-row gap-3 items-center">
+                  <s.icon color={baseColor} />
+                  <span className="font-black" style={{ marginTop: 0 }}>
+                    {s.title}
+                  </span>
+                </CardHeader>
+                <CardContent className="text-gray-400">{s.text}</CardContent>
+              </Card>
+            ))}
+          </div>
         </Card>
-        <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2 m-4 mb:m-0">
-          {services.map((s) => (
-            <Card key={s.title} className="bg-stone-950/50 shadow last:mb-6">
-              <CardHeader className="flex flex-row gap-3 items-center">
-                <s.icon color={baseColor} />
-                <span className="font-black" style={{ marginTop: 0 }}>
-                  {s.title}
-                </span>
-              </CardHeader>
-              <CardContent className="text-gray-400">{s.text}</CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
     </MotionWrapper>
   );

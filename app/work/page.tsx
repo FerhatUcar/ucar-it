@@ -29,7 +29,9 @@ const WorkPage = () => {
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
       >
-        <Card className="bg-stone-950/50 shadow lg:mr-0 mr-6 ml-3 md:mr-6 md:ml-0 last:mb-6">
+        <Card
+          className={`bg-stone-950/50 shadow lg:mr-0 mr-6 ml-3 md:mr-6 md:ml-0 ${hideButton && "last:mb-6"}`}
+        >
           <CardHeader className="text-gray-700">
             <CardTitle className="text-white">
               <span className="text-xl md:text-3xl">{p.company}</span>
@@ -72,9 +74,9 @@ const WorkPage = () => {
         {pageParagraphs}
         {!hideButton && (
           <div className="flex">
-            <div className="hidden lg:flex flex-col min-w-32"></div>
+            <div className="ml-6 w-[80px] md:ml-0 md:min-w-32"></div>
             <Button
-              className="mt-3 mx-6 mb-6 w-full transition-all lg:mr-0 mr-6 bg-rose-600 hover:bg-rose-800"
+              className="mb-6 w-full transition-all lg:mr-0 mr-6 bg-rose-600 hover:bg-rose-800"
               onClick={handleLoadMore}
             >
               Load More

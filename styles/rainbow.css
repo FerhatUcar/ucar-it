@@ -1,0 +1,55 @@
+.rainbow-text {
+  display: inline-flex;
+}
+
+h1 .rainbow-text span {
+  animation: rainbow 5s infinite linear;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff001f;
+  }
+  5% {
+    color: #be5f00;
+  }
+  10% {
+    color: orange;
+  }
+  20% {
+    color: #ffcc00;
+  }
+  30% {
+    color: #b7c500;
+  }
+  40% {
+    color: #1d9801;
+  }
+  50% {
+    color: #01936c;
+  }
+  60% {
+    color: #0078b7;
+  }
+  65% {
+    color: #004ca6;
+  }
+  70% {
+    color: #0037a2;
+  }
+  80% {
+    color: #4f008f;
+  }
+  85% {
+    color: #7a009d;
+  }
+  90% {
+    color: #a800a1;
+  }
+  95% {
+    color: #e10078;
+  }
+  100% {
+    color: #cc0000;
+  }
+}

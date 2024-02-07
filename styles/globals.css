@@ -75,9 +75,7 @@ body {
   src: url("../fonts/Poppins-Regular.ttf") format("truetype");
 }
 
-h1,
-h2,
-h3 {
+h1, h3 {
   font-family: "HeadFont", sans-serif;
 }
 
@@ -105,13 +103,33 @@ p {
   animation: dash 1.5s ease-in-out infinite;
 }
 
+.bounce {
+  animation: bounce 1s ease-in-out;
+}
+
 .shake {
   animation: shake 0.3s ease;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease-in;
 }
 
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Start at the top */
+  }
+  50% {
+    transform: translateY(-50px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Back to the starting position */
   }
 }
 
@@ -127,6 +145,15 @@ p {
   100% {
     stroke-dasharray: 90, 150;
     stroke-dashoffset: -124;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

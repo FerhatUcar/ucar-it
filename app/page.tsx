@@ -17,9 +17,9 @@ export default function Home() {
         width="120"
         height="160"
       />
-      <HeaderTitle text="I am Ferhat Ucar" />
-      <h2 className="text-2xl font-bold text-gray-400">Software Engineer</h2>
-      <div className="flex gap-2 justify-between mt-3 mb-6">
+      <HeaderTitle fadeIn text="I am " rainbowText="Ferhat Ucar" />
+      <h2 className="text-1xl tracking-widest uppercase text-gray-300 fadeIn">Software Engineer</h2>
+      <div className="flex gap-2 justify-between mt-6 mb-6">
         <Button className="bg-rose-600 hover:bg-rose-800">
           <Link href="/contact">Book me</Link>
         </Button>

@@ -61,7 +61,7 @@ const ProjectsPage = () => (
             className="pb-1 last:pb-0"
             target="_blank"
           >
-            <Button className="w-full md:w-[200px] flex flex-row gap-2 items-center bg-rose-600 hover:bg-rose-800">
+            <Button className="w-full md:w-[200px] flex flex-row gap-2 items-center bg-rose-600 hover:bg-rose-800 text-white">
               <span>Visit website</span>
               <ArrowUpRight size={18} />
             </Button>

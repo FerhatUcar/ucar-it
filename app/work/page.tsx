@@ -41,11 +41,12 @@ const WorkPage = () => {
               <span className="text-rose-400">{p.title}</span>
             </CardDescription>
           </CardHeader>
-          <CardContent className="flex flex-col text-gray-400 space-y-2">
+          <CardContent className="flex flex-col text-gray-400 space-y-4">
             <p>{p.text}</p>
             {p.text2 && <p>{p.text2}</p>}
             {p.text3 && <p>{p.text3}</p>}
             {p.text4 && <p>{p.text4}</p>}
+            {p.text5 && <p>{p.text5}</p>}
           </CardContent>
           <CardFooter>
             <p>{p.stack}</p>

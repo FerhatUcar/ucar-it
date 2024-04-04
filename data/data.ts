@@ -23,6 +23,7 @@ import {
   TrendingUpIcon,
   UserRound,
   Wrench,
+  BriefcaseBusiness,
 } from "lucide-react";
 
 export const contactDetails = [
@@ -44,7 +45,7 @@ export const contactDetails = [
   },
   {
     icon: NotebookText,
-    text: "KVK 94029023",
+    text: "KVK: 93467699",
   },
 ];
 
@@ -53,6 +54,7 @@ export const links = [
   { label: "About", href: "/about", icon: CircleUserRound },
   { label: "Work", href: "/work", icon: Briefcase },
   { label: "Skills", href: "/skills", icon: BarChart2 },
+  { label: "Projects", href: "/projects", icon: BriefcaseBusiness },
   { label: "Contact", href: "/contact", icon: Phone },
 ];
 
@@ -119,10 +121,12 @@ export const workInformation = [
     place: "Tilburg",
     title: "Software Engineer",
     text: "I've had the opportunity to contribute to the development of two dynamic web applications, each with distinct functionalities and technologies.",
-    text2: "In the first application, drawing inspiration from Discord, I crafted a feature-rich communication platform. Leveraging Next.js and Socket.IO, users can engage in real-time chat conversations and even conduct video calls with registered members. Data management was streamlined using Prisma, with seamless integration with PlanetScale for robust data storage. For deployment, I utilized Vercel, ensuring efficient delivery and scalability. The user interface was meticulously designed using the ShadCN component library and TailwindCSS, ensuring a visually appealing and intuitive experience.",
+    text2:
+      "In the first application, drawing inspiration from Discord, I crafted a feature-rich communication platform. Leveraging Next.js and Socket.IO, users can engage in real-time chat conversations and even conduct video calls with registered members. Data management was streamlined using Prisma, with seamless integration with PlanetScale for robust data storage. For deployment, I utilized Vercel, ensuring efficient delivery and scalability. The user interface was meticulously designed using the ShadCN component library and TailwindCSS, ensuring a visually appealing and intuitive experience.",
     text3:
       "In the second application, I ventured into creating a ticket management system akin to Jira, catering to organizational needs for task allocation and tracking. Employing the same powerful toolset of Next.js, Socket.IO, Prisma, and PlanetScale, I ensured consistency and reliability across both applications. Once again, Vercel served as the deployment platform, guaranteeing seamless access and performance. The user interface, crafted with the ShadCN component library and TailwindCSS, prioritized usability and efficiency, empowering users to manage tasks effortlessly.",
-    text4: "These experiences not only honed my technical skills but also instilled in me a deep appreciation for creating impactful and user-centric web applications.",
+    text4:
+      "These experiences not only honed my technical skills but also instilled in me a deep appreciation for creating impactful and user-centric web applications.",
     stack:
       "Stack: HTML5, NextJS, TypeScript, React, Zod, Tailwind CSS, Recoil/Zustand, React hook forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
   },
@@ -134,9 +138,12 @@ export const workInformation = [
     text: "At ASML, a renowned high-tech company specializing in photolithography machines for computer chip production, I contributed significantly to web component development using Storybook, styled-components, and React. Collaborating within an agile team comprising seven developers, I played a crucial role in crafting robust and user-friendly interfaces.",
     text2:
       "Test-driven development was a cornerstone of our process, with tests meticulously written using React Testing Library and Enzyme for unit testing, and Cypress for end-to-end (E2E) testing. This ensured the reliability and quality of our codebase.",
-    text3: "Moreover, I had the opportunity to transition to a more intricate core team, consisting of eight members, where we delved into data transformation and visualization. Here, we leveraged React and web components to build dynamic graphs, enabling stakeholders to gain valuable insights from complex datasets.",
-    text4: "Throughout my tenure, project management was facilitated through Jira for task scheduling, while BitBucket served as our primary pipeline for version control and continuous integration/deployment.",
-    text5: "This experience not only expanded my technical repertoire but also underscored the importance of collaboration and innovation in delivering cutting-edge solutions within a dynamic and fast-paced environment at ASML.",
+    text3:
+      "Moreover, I had the opportunity to transition to a more intricate core team, consisting of eight members, where we delved into data transformation and visualization. Here, we leveraged React and web components to build dynamic graphs, enabling stakeholders to gain valuable insights from complex datasets.",
+    text4:
+      "Throughout my tenure, project management was facilitated through Jira for task scheduling, while BitBucket served as our primary pipeline for version control and continuous integration/deployment.",
+    text5:
+      "This experience not only expanded my technical repertoire but also underscored the importance of collaboration and innovation in delivering cutting-edge solutions within a dynamic and fast-paced environment at ASML.",
     stack:
       "Stack: HTML5, Styled components, TypeScript, Immutable, Lodash, React, Redux & React hook forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
   },
@@ -145,16 +152,16 @@ export const workInformation = [
     date: "2019-2022",
     place: "Rotterdam",
     title: "CO founder & Software Engineer",
-    text:
-      "As a co-owner of a software company specializing in machine learning cameras, my role extended beyond traditional boundaries, encompassing various facets of product development and management. Together with my partner, I actively contributed to drawing and training object models, leveraging our expertise to enhance the capabilities of our machine learning cameras.",
+    text: "As a co-owner of a software company specializing in machine learning cameras, my role extended beyond traditional boundaries, encompassing various facets of product development and management. Together with my partner, I actively contributed to drawing and training object models, leveraging our expertise to enhance the capabilities of our machine learning cameras.",
     text2:
       "In addition to our hardware offerings, I led the creation of a companion mobile application designed to seamlessly integrate with our cameras. Developed using Cordova and Angular, and styled with a blend of Styled Components and Tailwind CSS, the app exemplifies our commitment to delivering intuitive and visually appealing user interfaces.",
     text3:
       "Drawing on my rich background as a front-end developer, I ensured that the app's interface not only met but exceeded user expectations. Leveraging tools like Hotjar and Adobe XD, I meticulously crafted prototypes and iterated on designs to optimize user experience (UX) and interface aesthetics. Furthermore, I integrated Google Analytics to gain insights into user behavior and continuously improve our application's performance and usability.",
     text4:
       "Collaborating closely with our backend developer, I facilitated the integration of frontend and backend workflows, streamlining our DevOps process for efficient deployment using Vercel. Through Infrastructure as Code (IaC) practices, I optimized our server infrastructure, enhancing scalability and reliability.",
-    text5: "Furthermore, I automated critical build processes and implemented robust testing strategies to ensure the reliability and performance of our application. By fostering a collaborative DevOps culture within our cross-functional team, I contributed to enhanced efficiency and quicker turnaround times in delivering updates and new features to our users.\n" +
-        "My multifaceted role as a co-owner and front-end developer has been instrumental in driving the success and growth of our software company, ensuring that our products not only meet but exceed the expectations of our users.",
+    text5:
+      "Furthermore, I automated critical build processes and implemented robust testing strategies to ensure the reliability and performance of our application. By fostering a collaborative DevOps culture within our cross-functional team, I contributed to enhanced efficiency and quicker turnaround times in delivering updates and new features to our users.\n" +
+      "My multifaceted role as a co-owner and front-end developer has been instrumental in driving the success and growth of our software company, ensuring that our products not only meet but exceed the expectations of our users.",
     stack:
       "Stack: HTML5, SCSS, TypeScript, Angular, Ionic, Cordova, TensorFlow, Python, Xcode & Vercel.",
   },
@@ -165,7 +172,8 @@ export const workInformation = [
     place: "Rotterdam",
     title: "Front-end Engineer",
     text: "Eneco is a leading sustainable energy company, dedicated to driving the transition towards a more sustainable world. With a focus on renewable energy solutions, Eneco aims to empower individuals and businesses to make environmentally conscious choices.",
-    text2: "Collaborated within a team of five developers to enhance web components using Storybook, styled-components, and React. Employed agile methodologies to iteratively refine the UI and analyze user statistics for optimal improvements.",
+    text2:
+      "Collaborated within a team of five developers to enhance web components using Storybook, styled-components, and React. Employed agile methodologies to iteratively refine the UI and analyze user statistics for optimal improvements.",
     stack:
       "Stack: HTML5, SCSS, TypeScript, Style Components, Storybook, React, Yalc, Enzyme & RTL.",
   },
@@ -175,12 +183,15 @@ export const workInformation = [
     months: "(3 months)",
     place: "Rotterdam",
     title: "Lead Front-end Engineer",
-    text:
-      "At GZ. Plein, I spearheaded a small but dynamic team focused on providing online assistance for mental health concerns. Taking the lead role, I led the development of a comprehensive platform from inception to deployment.",
-    text2: "Our platform was designed to offer accessible support, training, and courses for individuals grappling with mental health or related issues. We meticulously crafted a user-friendly experience, allowing users to sign up for assistance seamlessly. Central to this effort was the integration of a headless CMS, which I adeptly connected to the front-end interface.",
-    text3: "In addition to my technical responsibilities, I served as a crucial liaison between designers and our clients, ensuring that our platform's design aligned closely with user needs and expectations.",
-    text4: "Our front-end architecture was built upon React, leveraging the efficiency and state management capabilities of Recoil. Styled Components were employed to maintain a consistent and visually appealing user interface throughout the platform.",
-    text5: "My leadership and technical expertise were instrumental in the successful development and launch of the GZ. Plein platform, empowering individuals to access the support and resources they need for mental well-being.",
+    text: "At GZ. Plein, I spearheaded a small but dynamic team focused on providing online assistance for mental health concerns. Taking the lead role, I led the development of a comprehensive platform from inception to deployment.",
+    text2:
+      "Our platform was designed to offer accessible support, training, and courses for individuals grappling with mental health or related issues. We meticulously crafted a user-friendly experience, allowing users to sign up for assistance seamlessly. Central to this effort was the integration of a headless CMS, which I adeptly connected to the front-end interface.",
+    text3:
+      "In addition to my technical responsibilities, I served as a crucial liaison between designers and our clients, ensuring that our platform's design aligned closely with user needs and expectations.",
+    text4:
+      "Our front-end architecture was built upon React, leveraging the efficiency and state management capabilities of Recoil. Styled Components were employed to maintain a consistent and visually appealing user interface throughout the platform.",
+    text5:
+      "My leadership and technical expertise were instrumental in the successful development and launch of the GZ. Plein platform, empowering individuals to access the support and resources they need for mental well-being.",
     stack:
       "Stack: HTML5, Styled Component, Material UI, React, Enzyme, RTL, Recoil, Axios, GraphQl, Barrel, Azure DevOps,\n" +
       "Swagger, OpenApi3, Piranha CMS and Adobe Xd",
@@ -192,8 +203,10 @@ export const workInformation = [
     place: "Rotterdam",
     title: "Front-end Engineer",
     text: "During my tenure as a temporary replacement at the Chamber of Commerce, I made significant contributions by efficiently delivering a multitude of projects within tight deadlines. One notable initiative I spearheaded was the proposal and implementation of a web component library.",
-    text2: "Recognizing the need for streamlined development and consistent design across projects, I took the initiative to establish a comprehensive documentation and design system using React. This involved meticulous planning and execution to ensure the library met the organization's specific requirements and standards.",
-    text3: "By setting up this web component library, I not only facilitated faster and more cohesive development but also fostered a culture of efficiency and consistency within the organization. My proactive approach and commitment to enhancing the Chamber of Commerce's digital infrastructure were instrumental in driving productivity and innovation during my tenure.",
+    text2:
+      "Recognizing the need for streamlined development and consistent design across projects, I took the initiative to establish a comprehensive documentation and design system using React. This involved meticulous planning and execution to ensure the library met the organization's specific requirements and standards.",
+    text3:
+      "By setting up this web component library, I not only facilitated faster and more cohesive development but also fostered a culture of efficiency and consistency within the organization. My proactive approach and commitment to enhancing the Chamber of Commerce's digital infrastructure were instrumental in driving productivity and innovation during my tenure.",
     stack:
       "Stack: HTML5, Styled Components, React, Redux, Immutable.js, Node, GraphQl, Nightwatch, Enzyme, RTL, Gitlab\n" +
       "and Docker.",
@@ -204,8 +217,10 @@ export const workInformation = [
     place: "Zoetermeer",
     title: "Software Engineer & UX Designer",
     text: "This is a large public authority, located in Zoetermeer. I worked here on an audio platform where we utilized the Web Audio API. My role involved designing mocks and prototypes in Adobe XD, which I then translated into the frontend implementation, giving me complete control over the interface and user experience (UX).",
-    text2: "In addition to this, I integrated Hotjar into our workflow, leveraging its capabilities to gain insights into user behavior and optimize the platform further. By analyzing heatmaps, recordings, and user feedback, I could refine our designs and features effectively.",
-    text3: "Moreover, I authored end-to-end (e2e) tests in Cypress to ensure the interface's optimal performance with every new feature iteration. Additionally, I meticulously adhered to the standards of WCAG 2.1 A + AA to guarantee maximum accessibility for all users.",
+    text2:
+      "In addition to this, I integrated Hotjar into our workflow, leveraging its capabilities to gain insights into user behavior and optimize the platform further. By analyzing heatmaps, recordings, and user feedback, I could refine our designs and features effectively.",
+    text3:
+      "Moreover, I authored end-to-end (e2e) tests in Cypress to ensure the interface's optimal performance with every new feature iteration. Additionally, I meticulously adhered to the standards of WCAG 2.1 A + AA to guarantee maximum accessibility for all users.",
     stack:
       "Stack: HTML5, SCSS, Styled Components, TypeScript, React, Redux (toolkit), Material UI, Cypress, Cu-\n" +
       "cumber, Lodash, RxJS, Git, Node, Express, Adobe Xd and Pencil.",
@@ -216,10 +231,14 @@ export const workInformation = [
     place: "Nederhemert Zuid",
     title: "Front-end Engineer & UX Designer",
     text: "Calvi is a leading provider of invoicing solutions tailored for large telecom corporations such as T-Mobile, KPN, and Vodafone. Within Calvi, I played a pivotal role in a transformative project, orchestrating the migration from AngularJS to Angular while concurrently spearheading the development of a comprehensive design system.",
-    text2: "During this migration, I seamlessly transitioned designs into fully functional interfaces, ensuring a smooth user experience and optimal performance. This involved meticulous attention to detail and a deep understanding of both the legacy and modern frameworks.",
-    text3: "Moreover, I took charge of managing and expanding the web components library, ensuring continuity and consistency across all interfaces. I diligently optimized the interface based on user feedback, leveraging insights from tools like Hotjar to refine the user experience continually.",
-    text4: "My commitment to creating intuitive and user-friendly interfaces was evident throughout the project, as I prioritized usability and accessibility at every stage of development. Additionally, I actively promoted best practices within the UX/UI domain, fostering a culture of excellence and innovation within the team.",
-    text5: "Overall, my contributions to the migration project, coupled with my dedication to UX/UI excellence at Calvi, have been instrumental in enhancing the platform's capabilities and user experience for our esteemed telecom clientele.",
+    text2:
+      "During this migration, I seamlessly transitioned designs into fully functional interfaces, ensuring a smooth user experience and optimal performance. This involved meticulous attention to detail and a deep understanding of both the legacy and modern frameworks.",
+    text3:
+      "Moreover, I took charge of managing and expanding the web components library, ensuring continuity and consistency across all interfaces. I diligently optimized the interface based on user feedback, leveraging insights from tools like Hotjar to refine the user experience continually.",
+    text4:
+      "My commitment to creating intuitive and user-friendly interfaces was evident throughout the project, as I prioritized usability and accessibility at every stage of development. Additionally, I actively promoted best practices within the UX/UI domain, fostering a culture of excellence and innovation within the team.",
+    text5:
+      "Overall, my contributions to the migration project, coupled with my dedication to UX/UI excellence at Calvi, have been instrumental in enhancing the platform's capabilities and user experience for our esteemed telecom clientele.",
     stack:
       "Stack: HTML5, SCSS, TS, Angular 2+, Bourbon, JSON, RxJS, NGRX, Webpack, Git, NX, Cypress, Cucumber, Doc-\n" +
       "ker, Azure DevOps, Jenkins and Adobe Xd.",
@@ -230,8 +249,10 @@ export const workInformation = [
     place: "Oosterhout",
     title: "Lead Front-end Engineer",
     text: "At QI Press Controls, a leading provider of products and services for printing companies like de Telegraaf and DPG Media, I undertook the development of a comprehensive dashboard solution. Leveraging HighchartsJS, I engineered a dynamic dashboard interface that empowered users to visualize and analyze statistics derived from diverse printing devices.",
-    text2: "My role encompassed not only the technical implementation but also liaising with stakeholders to understand their requirements and objectives. This collaborative approach ensured that the dashboard met the specific needs of the printing industry, facilitating informed decision-making and performance optimization.",
-    text3: "By harnessing the capabilities of HighchartsJS, I enabled users to gain valuable insights into collected data, enhancing efficiency and productivity across print operations. My contribution to this project played a pivotal role in QI Press Controls' mission to provide cutting-edge solutions tailored to the unique challenges of the printing world.",
+    text2:
+      "My role encompassed not only the technical implementation but also liaising with stakeholders to understand their requirements and objectives. This collaborative approach ensured that the dashboard met the specific needs of the printing industry, facilitating informed decision-making and performance optimization.",
+    text3:
+      "By harnessing the capabilities of HighchartsJS, I enabled users to gain valuable insights into collected data, enhancing efficiency and productivity across print operations. My contribution to this project played a pivotal role in QI Press Controls' mission to provide cutting-edge solutions tailored to the unique challenges of the printing world.",
     stack:
       "Stack: HTML5, SCSS, Django, React, HighCharts.js, Docker, Grunt, NPM, Bower and Git.",
   },
@@ -241,8 +262,10 @@ export const workInformation = [
     place: "Oud Gastel",
     title: "Front-end Engineer",
     text: "At the online drugstore, I spearheaded the implementation of a new, responsive payment interface aimed at enhancing user experience and streamlining the purchasing process. Collaborating closely with a designer, I meticulously analyzed the existing page layout to identify areas for improvement, particularly in mobile optimization.",
-    text2: "Recognizing the outdated nature of the current page and its suboptimal performance on mobile devices, I initiated a comprehensive overhaul. This involved deconstructing the legacy HTML structure, which was predominantly PHP-based, and transitioning it to Twig. By modernizing the frontend templating language, I strengthened the connection between frontend and backend systems, facilitating smoother data exchange and improved functionality.",
-    text3: "Throughout this process, I ensured alignment with the designer's vision, prioritizing user-centric design principles and seamless integration with backend processes. The result was a responsive payment interface that not only met the company's current needs but also positioned it for future scalability and growth in the competitive online marketplace.",
+    text2:
+      "Recognizing the outdated nature of the current page and its suboptimal performance on mobile devices, I initiated a comprehensive overhaul. This involved deconstructing the legacy HTML structure, which was predominantly PHP-based, and transitioning it to Twig. By modernizing the frontend templating language, I strengthened the connection between frontend and backend systems, facilitating smoother data exchange and improved functionality.",
+    text3:
+      "Throughout this process, I ensured alignment with the designer's vision, prioritizing user-centric design principles and seamless integration with backend processes. The result was a responsive payment interface that not only met the company's current needs but also positioned it for future scalability and growth in the competitive online marketplace.",
     stack:
       "Stack: HTML5, CSS3, JS, SCSS, jQuery, AngularJS, Bourbon, Neat, PHP, Twig, SQL, Gulp, Git, NPM and Vagrant.",
   },
@@ -252,9 +275,12 @@ export const workInformation = [
     place: "Rotterdam",
     title: "Front-end Engineer",
     text: "My initial foray into the professional world began with my first employer, a small but dynamic company nestled within the vibrant network of Rotterdam. Here, I embarked on my journey of gaining invaluable work experience, engaging in diverse projects that encompassed website and application maintenance for a range of clientele.",
-    text2: "Working closely with clients such as Alexadrium, Delifrance, and Electrolux, I cultivated strong one-on-one relationships, serving as a direct point of contact for their varied needs and requirements. This direct interaction not only honed my communication and interpersonal skills but also deepened my understanding of client expectations and preferences.",
-    text3: "Within this dynamic environment, I navigated the intricacies of maintaining multiple websites and applications, each with its unique set of challenges and opportunities. Whether it was troubleshooting technical issues, implementing updates, or optimizing performance, I embraced each task with enthusiasm and dedication, contributing to the success and satisfaction of our clients.",
-    text4: "My tenure at this first employer provided me with a solid foundation upon which to build my career, instilling in me a strong work ethic, adaptability, and a passion for delivering exceptional service and solutions to clients.",
+    text2:
+      "Working closely with clients such as Alexadrium, Delifrance, and Electrolux, I cultivated strong one-on-one relationships, serving as a direct point of contact for their varied needs and requirements. This direct interaction not only honed my communication and interpersonal skills but also deepened my understanding of client expectations and preferences.",
+    text3:
+      "Within this dynamic environment, I navigated the intricacies of maintaining multiple websites and applications, each with its unique set of challenges and opportunities. Whether it was troubleshooting technical issues, implementing updates, or optimizing performance, I embraced each task with enthusiasm and dedication, contributing to the success and satisfaction of our clients.",
+    text4:
+      "My tenure at this first employer provided me with a solid foundation upon which to build my career, instilling in me a strong work ethic, adaptability, and a passion for delivering exceptional service and solutions to clients.",
     stack:
       "Stack: HTML, SCSS, DNN, ASP.NET, JS, jQuery, AngularJS, GSAP Tweenlite, Bootstraps SASS, Compass, Bourbon, Adobe Photoshop, Adobe Illustrator & MailChimp",
   },
@@ -315,13 +341,13 @@ export const skills = [
     title: "HTML",
     src: "/html.png",
     percents: 99,
-    logoWidth: 28
+    logoWidth: 28,
   },
   {
     title: "CSS",
     src: "/css.png",
     percents: 99,
-    logoWidth: 28
+    logoWidth: 28,
   },
   {
     title: "React",
@@ -423,11 +449,16 @@ export const skills = [
     title: "Rabbit MQ",
     src: "/rabbitmq.png",
     percents: 44,
-    logoWidth: 25
+    logoWidth: 25,
   },
   {
     title: "Socket IO",
     src: "/socket.png",
     percents: 38,
+  },
+  {
+    title: "Zod",
+    src: "/zod.svg",
+    percents: 95,
   },
 ];

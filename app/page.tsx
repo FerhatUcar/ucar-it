@@ -18,7 +18,9 @@ export default function Home() {
         height="160"
       />
       <HeaderTitle fadeIn text="I am " rainbowText="Ferhat Ucar" />
-      <h2 className="text-1xl tracking-widest uppercase text-gray-300 fadeIn">Software Engineer</h2>
+      <h2 className="text-1xl font-black tracking-widest uppercase text-gray-300 fadeIn">
+        Software Engineer
+      </h2>
       <div className="flex gap-2 justify-between mt-6 mb-6">
         <Button className="bg-rose-600 hover:bg-rose-800">
           <Link href="/contact">Book me</Link>
@@ -28,22 +30,19 @@ export default function Home() {
         </Button>
       </div>
       <div className="my-6">
-        <Card className="bg-stone-950/50 shadow p-3 m-4 mb:m-0">
-          <h2 className="text-3xl font-bold text-center">Services</h2>
-          <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2 m-4 mb:m-0">
-            {services.map((s) => (
-              <Card key={s.title} className="bg-stone-950 shadow">
-                <CardHeader className="flex flex-row gap-3 items-center">
-                  <s.icon color={baseColor} />
-                  <span className="font-black" style={{ marginTop: 0 }}>
-                    {s.title}
-                  </span>
-                </CardHeader>
-                <CardContent className="text-gray-400">{s.text}</CardContent>
-              </Card>
-            ))}
-          </div>
-        </Card>
+        <div className="mt-3 grid grid-cols-1 lg:grid-cols-3 gap-2 m-4 mb:m-0">
+          {services.map((s) => (
+            <Card key={s.title} className="bg-stone-950 shadow">
+              <CardHeader className="flex flex-row gap-3 items-center">
+                <s.icon color={baseColor} />
+                <span className="font-black" style={{ marginTop: 0 }}>
+                  {s.title}
+                </span>
+              </CardHeader>
+              <CardContent className="text-gray-400">{s.text}</CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </MotionWrapper>
   );

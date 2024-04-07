@@ -35,13 +35,6 @@ const ProjectsPage = () => (
             management.
           </div>
           <div>
-            Throughout the development process, my responsibilities included
-            collaborating with the team to design intuitive user interfaces,
-            implementing backend functionalities to handle orders and payments
-            securely, and ensuring seamless communication between frontend and
-            backend components.
-          </div>
-          <div>
             I also worked on optimizing the performance of the webshop and
             maintaining high standards of security to safeguard user data.
             Drawing inspiration from the vibrant snack bar culture, the project

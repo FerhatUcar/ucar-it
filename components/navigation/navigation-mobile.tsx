@@ -25,7 +25,7 @@ const NavigationMobile = () => {
 
   return (
     <div className="md:hidden flex flex-row items-center justify-between bg-neutral-950 w-full h-14">
-      <div className="flex flex-row items-center gap-2 pl-4">
+      <div className="flex flex-row items-center gap-2 pl-4 font-black">
         <Image
           src="/portrait.jpg"
           className="rounded-full border-solid border-white"
@@ -66,7 +66,7 @@ const NavigationMobile = () => {
                   size="icon"
                 >
                   <Icon color={baseColor} />
-                  <h2 className="uppercase text-xl">{label}</h2>
+                  <h2 className="uppercase text-xl font-black">{label}</h2>
                 </Button>
               </Link>
             ))}

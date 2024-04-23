@@ -158,12 +158,12 @@ export const workInformation = [
     text3:
       "Drawing on my rich background as a front-end developer, I ensured that the app's interface not only met but exceeded user expectations. Leveraging tools like Hotjar and Adobe XD, I meticulously crafted prototypes and iterated on designs to optimize user experience (UX) and interface aesthetics. Furthermore, I integrated Google Analytics to gain insights into user behavior and continuously improve our application's performance and usability.",
     text4:
-      "Collaborating closely with our backend developer, I facilitated the integration of frontend and backend workflows, streamlining our DevOps process for efficient deployment using Vercel. Through Infrastructure as Code (IaC) practices, I optimized our server infrastructure, enhancing scalability and reliability.",
+      "Collaborating closely with our backend developer, I facilitated the integration of frontend and backend workflows, streamlining our DevOps process for efficient deployment to the Apple app store. Through Infrastructure as Code (IaC) practices, I optimized our server infrastructure, enhancing scalability and reliability.",
     text5:
-      "Furthermore, I automated critical build processes and implemented robust testing strategies to ensure the reliability and performance of our application. By fostering a collaborative DevOps culture within our cross-functional team, I contributed to enhanced efficiency and quicker turnaround times in delivering updates and new features to our users.\n" +
+      "Furthermore, I automated critical build processes and implemented robust testing strategies to ensure the reliability and performance of our application. By fostering a collaborative DevOps culture within our cross-functional team, I contributed to enhanced efficiency and quicker turnaround times in delivering updates and new features to our users." +
       "My multifaceted role as a co-owner and front-end developer has been instrumental in driving the success and growth of our software company, ensuring that our products not only meet but exceed the expectations of our users.",
     stack:
-      "Stack: HTML5, SCSS, TypeScript, Angular, Ionic, Cordova, TensorFlow, Python, Xcode & Vercel.",
+      "Stack: HTML5, SCSS, TypeScript, Angular, Ionic, Cordova, Swift, TensorFlow, Python, Xcode, Firebase, Adobe Xd.",
   },
   {
     company: "Eneco",
@@ -460,5 +460,10 @@ export const skills = [
     title: "Zod",
     src: "/zod.svg",
     percents: 95,
+  },
+  {
+    title: "Swift",
+    src: "/swift.png",
+    percents: 32,
   },
 ];

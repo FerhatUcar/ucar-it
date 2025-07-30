@@ -116,54 +116,56 @@ export const AboutParagraphs = [
 
 export const workInformation = [
   {
-    company: "Team Rockstars",
-    date: "2021-Now",
-    place: "Tilburg",
-    title: "Software Engineer",
-    text: "I've had the opportunity to contribute to the development of two dynamic web applications, each with distinct functionalities and technologies.",
+    company: "DHL eCommerce",
+    date: "2024-Now",
+    place: "Utrecht",
+    title: "Frontend Developer",
+    text: "Ik werk momenteel bij DHL eCommerce als front-end ontwikkelaar, waar ik aan een native app werk, gebouwd met React en Kotlin. Het is een CRUD-applicatie die speciaal is ontworpen voor koeriers en volledig offline kan functioneren dankzij local storage.",
     text2:
-      "In the first application, drawing inspiration from Discord, I crafted a feature-rich communication platform. Leveraging Next.js and Socket.IO, users can engage in real-time chat conversations and even conduct video calls with registered members. Data management was streamlined using Prisma, with seamless integration with PlanetScale for robust data storage. For deployment, I utilized Vercel, ensuring efficient delivery and scalability. The user interface was meticulously designed using the ShadCN component library and TailwindCSS, ensuring a visually appealing and intuitive experience.",
+      "Data ophalen en verzenden gebeurt via Tanstack Query, met validatie via Zod en formulierbeheer met React Hook Form. De app is verpakt in een native shell en maakt gebruik van device hardware zoals GPS, scanner en camera via het Honeywell scannerapparaat.",
     text3:
-      "In the second application, I ventured into creating a ticket management system akin to Jira, catering to organizational needs for task allocation and tracking. Employing the same powerful toolset of Next.js, Socket.IO, Prisma, and PlanetScale, I ensured consistency and reliability across both applications. Once again, Vercel served as the deployment platform, guaranteeing seamless access and performance. The user interface, crafted with the ShadCN component library and TailwindCSS, prioritized usability and efficiency, empowering users to manage tasks effortlessly.",
+      "Op backendvlak heb ik bijgedragen met Spring Boot API’s, REST-endpoints, Kafka-producers/-consumers, en SQL-queries voor Oracle/PostgreSQL. We gebruiken Docker, Helm, Kubernetes, JFrog en observability via Datadog en Sentry.",
     text4:
-      "These experiences not only honed my technical skills but also instilled in me a deep appreciation for creating impactful and user-centric web applications.",
+      "Daarnaast schreef ik uitgebreide end-to-end testen in Cypress en unit tests in Jest om de betrouwbaarheid en regressievrijheid van onze applicatie te garanderen.",
     stack:
-      "Stack: HTML5, NextJS, TypeScript, React, Zod, Tailwind CSS, Recoil/Zustand, React hook forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
+      "Stack: Figma, HTML5, TypeScript, React (Native), Tanstack Query, Zod, React Hook Form, Material UI, Storybook, Cypress, Jest, Keycloak, Java, Kotlin, Spring Boot, Docker, Kubernetes, Kafka, Oracle, PostgreSQL, JFrog, Helm, Azure DevOps, Datadog, Sentry",
+  },
+  {
+    company: "Team Rockstars",
+    date: "2021-2024",
+    place: "Tilburg",
+    title: "Software Engineer / UX Developer",
+    text: "Bij Team Rockstars werkte ik aan twee grote projecten: een Discord-achtige communicatie-app met chat en video, en een ticketbeheersysteem vergelijkbaar met Jira. Beide gebouwd in Next.js met realtime functionaliteit via Socket.IO.",
+    text2:
+      "Dataopslag verliep via Prisma en PlanetScale. Vercel werd gebruikt voor deployment. Voor de UI gebruikte ik ShadCN en TailwindCSS. Beide applicaties legden de nadruk op performance, gebruiksvriendelijkheid en schaalbaarheid.",
+    text3:
+      "Deze projecten hebben mijn technische vaardigheden verder ontwikkeld en mijn inzicht in het creëren van gebruiksvriendelijke, impactvolle webapplicaties verdiept.",
+    stack:
+      "Stack: HTML5, NextJS, ShadCN, TypeScript, React, Zod, Tailwind CSS, Recoil/Zustand, React Hook Forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
   },
   {
     company: "ASML",
     date: "2021-2023",
     place: "Veldhoven",
     title: "Software Engineer",
-    text: "At ASML, a renowned high-tech company specializing in photolithography machines for computer chip production, I contributed significantly to web component development using Storybook, styled-components, and React. Collaborating within an agile team comprising seven developers, I played a crucial role in crafting robust and user-friendly interfaces.",
+    text: "Bij ASML werkte ik aan UI-componenten en grafieken voor datavisualisatie. Ik maakte gebruik van Storybook, Styled Components en React. Ook werkte ik mee aan TDD met React Testing Library, Enzyme, en Cypress.",
     text2:
-      "Test-driven development was a cornerstone of our process, with tests meticulously written using React Testing Library and Enzyme for unit testing, and Cypress for end-to-end (E2E) testing. This ensured the reliability and quality of our codebase.",
+      "In het core team werkte ik aan complexe datavisualisatie met grafieken in React en Echarts. Samenwerking verliep via Jira en Bitbucket.",
     text3:
-      "Moreover, I had the opportunity to transition to a more intricate core team, consisting of eight members, where we delved into data transformation and visualization. Here, we leveraged React and web components to build dynamic graphs, enabling stakeholders to gain valuable insights from complex datasets.",
-    text4:
-      "Throughout my tenure, project management was facilitated through Jira for task scheduling, while BitBucket served as our primary pipeline for version control and continuous integration/deployment.",
-    text5:
-      "This experience not only expanded my technical repertoire but also underscored the importance of collaboration and innovation in delivering cutting-edge solutions within a dynamic and fast-paced environment at ASML.",
+      "Deze ervaring heeft mijn technische vaardigheden verder versterkt en het belang van samenwerking in agile teams benadrukt.",
     stack:
-      "Stack: HTML5, Styled components, TypeScript, Immutable, Lodash, React, Redux & React hook forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
+      "Stack: HTML5, Styled Components, TypeScript, Immutable, Lodash, React, Redux & React Hook Forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
   },
   {
     company: "Scanly BV",
-    date: "2019-2022",
+    date: "2018-2022",
     place: "Rotterdam",
-    title: "CO founder & Software Engineer",
-    text: "As a co-owner of a software company specializing in machine learning cameras, my role extended beyond traditional boundaries, encompassing various facets of product development and management. Together with my partner, I actively contributed to drawing and training object models, leveraging our expertise to enhance the capabilities of our machine learning cameras.",
+    title: "Co-founder & Lead Angular Software Engineer",
+    text: "Als mede-eigenaar en technisch lead bouwde ik aan machine learning-camera’s en een bijbehorende mobiele app. De app, gebouwd in Angular en Cordova, integreerde met onze hardware.",
     text2:
-      "In addition to our hardware offerings, I led the creation of a companion mobile application designed to seamlessly integrate with our cameras. Developed using Cordova and Angular, and styled with a blend of Styled Components and Tailwind CSS, the app exemplifies our commitment to delivering intuitive and visually appealing user interfaces.",
-    text3:
-      "Drawing on my rich background as a front-end developer, I ensured that the app's interface not only met but exceeded user expectations. Leveraging tools like Hotjar and Adobe XD, I meticulously crafted prototypes and iterated on designs to optimize user experience (UX) and interface aesthetics. Furthermore, I integrated Google Analytics to gain insights into user behavior and continuously improve our application's performance and usability.",
-    text4:
-      "Collaborating closely with our backend developer, I facilitated the integration of frontend and backend workflows, streamlining our DevOps process for efficient deployment to the Apple app store. Through Infrastructure as Code (IaC) practices, I optimized our server infrastructure, enhancing scalability and reliability.",
-    text5:
-      "Furthermore, I automated critical build processes and implemented robust testing strategies to ensure the reliability and performance of our application. By fostering a collaborative DevOps culture within our cross-functional team, I contributed to enhanced efficiency and quicker turnaround times in delivering updates and new features to our users." +
-      "My multifaceted role as a co-owner and front-end developer has been instrumental in driving the success and growth of our software company, ensuring that our products not only meet but exceed the expectations of our users.",
+      "Ik ontwikkelde AI-modellen en testtools in Python/Flask. Voor UX gebruikte ik Adobe XD, Hotjar en Google Analytics. Daarnaast implementeerde ik IaC (Terraform), CI/CD en automatisering voor schaalbare infrastructuur.",
     stack:
-      "Stack: HTML5, SCSS, TypeScript, Angular, Ionic, Cordova, Swift, TensorFlow, Python, Xcode, Firebase, Adobe Xd.",
+      "Stack: HTML5, Tailwind, TypeScript, Angular, Ionic, NgRx, RxJs, Material UI, Cordova, Swift, TensorFlow, Python (Flask), Xcode, Terraform, Firebase, Adobe XD.",
   },
   {
     company: "Eneco",

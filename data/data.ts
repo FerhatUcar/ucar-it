@@ -120,13 +120,13 @@ export const workInformation = [
     date: "2024-Now",
     place: "Utrecht",
     title: "Frontend Developer",
-    text: "Ik werk momenteel bij DHL eCommerce als front-end ontwikkelaar, waar ik aan een native app werk, gebouwd met React en Kotlin. Het is een CRUD-applicatie die speciaal is ontworpen voor koeriers en volledig offline kan functioneren dankzij local storage.",
+    text: "At DHL eCommerce, I work as a frontend developer on a native courier app built with React and Kotlin. The app is designed to work fully offline using local storage, allowing seamless CRUD operations in the field.",
     text2:
-      "Data ophalen en verzenden gebeurt via Tanstack Query, met validatie via Zod en formulierbeheer met React Hook Form. De app is verpakt in een native shell en maakt gebruik van device hardware zoals GPS, scanner en camera via het Honeywell scannerapparaat.",
+      "Data fetching and submission are handled using Tanstack Query, with validation through Zod and form management via React Hook Form. The app interfaces with native hardware like GPS, scanners, and cameras via the Honeywell scanner device.",
     text3:
-      "Op backendvlak heb ik bijgedragen met Spring Boot API’s, REST-endpoints, Kafka-producers/-consumers, en SQL-queries voor Oracle/PostgreSQL. We gebruiken Docker, Helm, Kubernetes, JFrog en observability via Datadog en Sentry.",
+      "On the backend, I’ve contributed to building and maintaining Spring Boot APIs, implemented REST endpoints, integrated Keycloak for authentication, and built Kafka producers/consumers for async data flows. I also wrote SQL for Oracle and PostgreSQL databases.",
     text4:
-      "Daarnaast schreef ik uitgebreide end-to-end testen in Cypress en unit tests in Jest om de betrouwbaarheid en regressievrijheid van onze applicatie te garanderen.",
+      "The entire platform runs in Docker containers, deployed to Kubernetes via Helm. We use JFrog for image management and monitor everything through Datadog and Sentry. I’ve also implemented thorough E2E testing with Cypress and unit testing with Jest.",
     stack:
       "Stack: Figma, HTML5, TypeScript, React (Native), Tanstack Query, Zod, React Hook Form, Material UI, Storybook, Cypress, Jest, Keycloak, Java, Kotlin, Spring Boot, Docker, Kubernetes, Kafka, Oracle, PostgreSQL, JFrog, Helm, Azure DevOps, Datadog, Sentry",
   },
@@ -135,35 +135,37 @@ export const workInformation = [
     date: "2021-2024",
     place: "Tilburg",
     title: "Software Engineer / UX Developer",
-    text: "Bij Team Rockstars werkte ik aan twee grote projecten: een Discord-achtige communicatie-app met chat en video, en een ticketbeheersysteem vergelijkbaar met Jira. Beide gebouwd in Next.js met realtime functionaliteit via Socket.IO.",
+    text: "At Team Rockstars, I contributed to two major projects: a Discord-inspired communication platform and a Jira-like ticketing system. Both apps were built using Next.js with real-time functionality via Socket.IO.",
     text2:
-      "Dataopslag verliep via Prisma en PlanetScale. Vercel werd gebruikt voor deployment. Voor de UI gebruikte ik ShadCN en TailwindCSS. Beide applicaties legden de nadruk op performance, gebruiksvriendelijkheid en schaalbaarheid.",
+      "Data management was handled with Prisma and stored in PlanetScale. Vercel was used for deployment. The UI was crafted using the ShadCN component library and Tailwind CSS, focusing on performance, usability, and scalability.",
     text3:
-      "Deze projecten hebben mijn technische vaardigheden verder ontwikkeld en mijn inzicht in het creëren van gebruiksvriendelijke, impactvolle webapplicaties verdiept.",
+      "These projects strengthened my technical skills and deepened my understanding of building impactful, user-centered web applications.",
     stack:
-      "Stack: HTML5, NextJS, ShadCN, TypeScript, React, Zod, Tailwind CSS, Recoil/Zustand, React Hook Forms, Axios, SocketIO, Prisma, Vercel & PlanetScale.",
+      "Stack: HTML5, NextJS, ShadCN, TypeScript, React, Zod, Tailwind CSS, Recoil/Zustand, React Hook Form, Axios, Socket.IO, Prisma, Vercel & PlanetScale.",
   },
   {
     company: "ASML",
     date: "2021-2023",
     place: "Veldhoven",
     title: "Software Engineer",
-    text: "Bij ASML werkte ik aan UI-componenten en grafieken voor datavisualisatie. Ik maakte gebruik van Storybook, Styled Components en React. Ook werkte ik mee aan TDD met React Testing Library, Enzyme, en Cypress.",
+    text: "At ASML, a global leader in photolithography machines for chip production, I contributed to frontend component development using React, Styled Components, and Storybook, within an agile team of seven developers.",
     text2:
-      "In het core team werkte ik aan complexe datavisualisatie met grafieken in React en Echarts. Samenwerking verliep via Jira en Bitbucket.",
+      "Our workflow relied on test-driven development with React Testing Library, Enzyme, and Cypress. I later joined a core team focused on data transformation and visualization, building interactive charts and visual insights using Echarts and web components.",
     text3:
-      "Deze ervaring heeft mijn technische vaardigheden verder versterkt en het belang van samenwerking in agile teams benadrukt.",
+      "Tools like Jira and Bitbucket were used for project management, version control, and CI/CD. The experience sharpened both my technical depth and collaborative skills in a high-tech environment.",
     stack:
-      "Stack: HTML5, Styled Components, TypeScript, Immutable, Lodash, React, Redux & React Hook Forms, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
+      "Stack: HTML5, Styled Components, TypeScript, Immutable, Lodash, React, Redux & React Hook Form, Cypress, Echarts, Enzyme, Jest & RTL, Docker, PostgreSQL, Express & Axios.",
   },
   {
     company: "Scanly BV",
     date: "2018-2022",
     place: "Rotterdam",
     title: "Co-founder & Lead Angular Software Engineer",
-    text: "Als mede-eigenaar en technisch lead bouwde ik aan machine learning-camera’s en een bijbehorende mobiele app. De app, gebouwd in Angular en Cordova, integreerde met onze hardware.",
+    text: "As co-founder and tech lead of a company developing machine learning camera solutions, I defined the product roadmap, led the engineering team, and oversaw all software delivery efforts.",
     text2:
-      "Ik ontwikkelde AI-modellen en testtools in Python/Flask. Voor UX gebruikte ik Adobe XD, Hotjar en Google Analytics. Daarnaast implementeerde ik IaC (Terraform), CI/CD en automatisering voor schaalbare infrastructuur.",
+      "I built and trained object detection models, created internal tools with Python/Flask, and managed the development of a hybrid mobile app using Angular and Cordova. UX was shaped using Adobe XD, Hotjar, and Google Analytics.",
+    text3:
+      "I applied Infrastructure as Code (Terraform), CI/CD, and scalable architecture to ensure performance and reliability. My role merged leadership, innovation, and hands-on frontend development.",
     stack:
       "Stack: HTML5, Tailwind, TypeScript, Angular, Ionic, NgRx, RxJs, Material UI, Cordova, Swift, TensorFlow, Python (Flask), Xcode, Terraform, Firebase, Adobe XD.",
   },

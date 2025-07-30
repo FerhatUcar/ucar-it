@@ -344,39 +344,39 @@ export const skills = [
   {
     title: "HTML",
     src: "/html.png",
-    percents: 99,
+    percents: 95,
     logoWidth: 28,
   },
   {
     title: "CSS",
     src: "/css.png",
-    percents: 99,
+    percents: 93,
     logoWidth: 28,
   },
   {
     title: "React",
     src: "/react.png",
-    percents: 99,
+    percents: 87,
   },
   {
     title: "Angular",
     src: "/angular.png",
-    percents: 80,
+    percents: 75,
   },
   {
     title: "Node.js",
     src: "/node.png",
-    percents: 77,
+    percents: 63,
   },
   {
     title: "Python",
     src: "/python.png",
-    percents: 40,
+    percents: 38,
   },
   {
     title: "TypeScript",
     src: "/ts.png",
-    percents: 95,
+    percents: 86,
   },
   {
     title: "Next.js",
@@ -386,12 +386,12 @@ export const skills = [
   {
     title: "Tailwind",
     src: "/tailwind.png",
-    percents: 98,
+    percents: 92,
   },
   {
     title: "ShadCN",
     src: "/shadcn.png",
-    percents: 99,
+    percents: 98,
     logoWidth: 30,
   },
   {
@@ -424,7 +424,7 @@ export const skills = [
   {
     title: "Cypress",
     src: "/cypress.png",
-    percents: 83,
+    percents: 88,
   },
   {
     title: "Azure",
@@ -463,11 +463,11 @@ export const skills = [
   {
     title: "Zod",
     src: "/zod.svg",
-    percents: 95,
+    percents: 90,
   },
   {
     title: "Swift",
     src: "/swift.png",
-    percents: 32,
+    percents: 22,
   },
 ];

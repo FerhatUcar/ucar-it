@@ -22,6 +22,11 @@
 .sectionHeading > span { color: #93939f; font-size: 9px; letter-spacing: 1.5px; }
 .timeline { list-style: none; margin: 0; padding: 0; }
 .entry { position: relative; display: grid; grid-template-columns: 155px 36px minmax(0, 1fr); gap: 16px; padding-bottom: 26px; }
+.revealedEntry { animation: revealEntry .45s cubic-bezier(.22, 1, .36, 1) both; }
+@keyframes revealEntry {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 .entry::before { content: ""; position: absolute; left: 188px; width: 1px; top: 0; bottom: 0; background: #ffffff14; }
 .entry:first-child::before { top: 34px; background: linear-gradient(#fb37668c, #ffffff14); }
 .date { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 27px; font-size: 12px; font-weight: 600; color: #b8b8c3; }
@@ -105,5 +110,6 @@
   .contact { margin-top: 44px; flex-direction: column; align-items: flex-start; gap: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .revealedEntry { animation: none; }
   .page *, .page *::before { transition: none !important; }
 }

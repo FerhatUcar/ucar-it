@@ -1,19 +1,27 @@
 "use client";
 
-import { MotionWrapper } from "@/components/motion-wrapper";
 import Image from "next/image";
-import HeaderTitle from "@/components/custom/header";
 import { skills } from "@/data/data";
+import styles from "@/app/work/work.module.css";
 
 const SkillsPage = () => (
-  <MotionWrapper>
-    <HeaderTitle text="Skills" bottomSpace />
-    <p className="mb-8 max-w-2xl text-sm leading-7 text-zinc-400">
-      The tools and technologies I work with, from interfaces to infrastructure.
-    </p>
+  <main className={styles.page}>
+    <header className={styles.hero}>
+      <div>
+        <p className={styles.eyebrow}><span /> THE TOOLS OF MY TRADE</p>
+        <h1>Skills<span>.</span></h1>
+        <p className={styles.intro}>
+          The tools and technologies I work with, from interfaces to infrastructure.
+        </p>
+      </div>
+    </header>
     <ul className="skills-grid" aria-label="Technical skills">
-      {skills.map(({ src, title, subtitle, percents, logoWidth }) => (
-        <li key={title} className="skill-card">
+      {skills.map(({ src, title, subtitle, percents, logoWidth }, index) => (
+        <li
+          key={title}
+          className="skill-card"
+          style={{ animationDelay: `${index * 100}ms` }}
+        >
           <div className="skill-heading">
             <div className="skill-logo">
               <Image
@@ -45,7 +53,7 @@ const SkillsPage = () => (
         </li>
       ))}
     </ul>
-  </MotionWrapper>
+  </main>
 );
 
 export default SkillsPage;

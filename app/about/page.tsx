@@ -1,83 +1,78 @@
-import { MotionWrapper } from "@/components/motion-wrapper";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { AboutParagraphs } from "@/data/data";
-import { baseColor } from "@/app/const";
-import HeaderTitle from "@/components/custom/header";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Link as WebLink } from "lucide-react";
-import { Instagram } from "@/components/ui/brand-icons";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, Link as WebLink, UserRound } from "lucide-react";
+import { Instagram } from "@/components/ui/brand-icons";
+import { AboutParagraphs } from "@/data/data";
+import styles from "../work/work.module.css";
+import aboutStyles from "./about.module.css";
 
-const AboutPage = () => {
-  const pageParagraphs = AboutParagraphs.map((p, i) => (
-    <Card key={i} className="bg-stone-950/50 shadow-sm last:mb-6">
-      <CardHeader className="flex flex-row items-center gap-3">
-        <p.icon color={baseColor} />
-        <div className="text-gray-700">
-          <CardTitle className="text-white">{p.title}</CardTitle>
-          <CardDescription className="text-gray-400">{p.desc}</CardDescription>
-        </div>
-      </CardHeader>
-      <CardContent
-        className={`text-gray-400 ${p.image && "flex flex-col md:mr-4 md:flex-row gap-2"}`}
-      >
-        {p.image && (
-          <Image
-            src={p.image}
-            className="mb-3 md:mr-4 w-32 h-32 rounded-full border-solid border-4 border-white"
-            alt={p.title}
-            width="120"
-            height="160"
-          />
-        )}
-        <div>
-          <p>{p.text}</p>
-          {p.text2 && <p className="mt-3">{p.text2}</p>}
-        </div>
-      </CardContent>
-      {p.links && (
-        <CardFooter className="flex flex-row gap-2">
-          <Button className="bg-rose-600 hover:bg-rose-800">
-            <Link
-              className="flex flex-row gap-2 items-center"
-              target="_blank"
-              href="https://www.instagram.com/ferrygraphy/"
-            >
-              <Instagram size={16} />
-              <span>Instagram</span>
-            </Link>
-          </Button>
-          <Button variant="secondary" className="bg-zinc-800 hover:bg-zinc-700">
-            <Link
-              className="flex flex-row gap-2 items-center"
-              target="_blank"
-              href="https://www.ferrygraphy.nl/"
-            >
-              <WebLink size={16} />
-              <span>Website</span>
-            </Link>
-          </Button>
-        </CardFooter>
-      )}
-    </Card>
-  ));
-
-  return (
-    <MotionWrapper>
-      <HeaderTitle text="About me" bottomSpace />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {pageParagraphs}
+const AboutPage = () => (
+  <main className={styles.page}>
+    <header className={styles.hero}>
+      <div>
+        <p className={styles.eyebrow}><span /> BEHIND THE WORK</p>
+        <h1>About me<span>.</span></h1>
+        <p className={styles.intro}>
+          Engineer, creative and explorer. A little about the person behind
+          the code, and the things that keep me curious.
+        </p>
       </div>
-    </MotionWrapper>
-  );
-};
+      <div className={`${styles.overview} ${aboutStyles.overview}`} aria-label="About Ferhat">
+        <div><strong>Ferhat Ucar</strong><span>Software engineer &amp; designer</span></div>
+        <div><strong>Beyond code</strong><span>Photography, travel &amp; everyday life</span></div>
+      </div>
+    </header>
+
+    <section aria-labelledby="story-title">
+      <div className={styles.sectionHeading}>
+        <h2 id="story-title"><UserRound size={17} aria-hidden="true" /> My story</h2>
+        <span>WORK, CREATIVITY &amp; LIFE</span>
+      </div>
+      <div className={aboutStyles.stories}>
+        {AboutParagraphs.map((paragraph, index) => (
+            <article key={paragraph.title} className={`${styles.card} ${aboutStyles.storyCard}`} aria-labelledby={`about-${index}`}>
+              <header className={styles.cardHeader}>
+                <div className={styles.companyIcon} aria-hidden="true"><paragraph.icon size={21} /></div>
+                <div className={styles.company}>
+                  <h3 id={`about-${index}`}>{paragraph.title}</h3>
+                  <p>{paragraph.desc}</p>
+                </div>
+              </header>
+              <div className={aboutStyles.storyContent}>
+                {paragraph.image && (
+                  <Image
+                    src={paragraph.image}
+                    className={aboutStyles.portrait}
+                    alt={index === 0 ? "Portrait of Ferhat Ucar" : "Ferhat’s travels"}
+                    width={128}
+                    height={128}
+                  />
+                )}
+                <div className={aboutStyles.copy}>
+                  <p className={styles.description}>{paragraph.text}</p>
+                  {paragraph.text2 && <p className={styles.description}>{paragraph.text2}</p>}
+                </div>
+              </div>
+              {paragraph.links && (
+                <footer className={aboutStyles.links}>
+                  <a href="https://www.instagram.com/ferrygraphy/" target="_blank" rel="noopener noreferrer">
+                    <Instagram size={16} aria-hidden="true" /> Instagram <ArrowUpRight size={14} aria-hidden="true" />
+                  </a>
+                  <a href="https://www.ferrygraphy.nl/" target="_blank" rel="noopener noreferrer">
+                    <WebLink size={16} aria-hidden="true" /> Website <ArrowUpRight size={14} aria-hidden="true" />
+                  </a>
+                </footer>
+              )}
+            </article>
+        ))}
+      </div>
+    </section>
+
+    <footer className={styles.contact}>
+      <div><p className={styles.eyebrow}>WHAT’S NEXT?</p><h2>Let’s build something great.</h2></div>
+      <Link href="/contact">Get in touch <ArrowUpRight size={18} aria-hidden="true" /></Link>
+    </footer>
+  </main>
+);
 
 export default AboutPage;

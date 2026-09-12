@@ -34,34 +34,40 @@ const WorkPage = () => {
         </div>
         <ol className={styles.timeline}>
           {experience.map((work, index) => {
-            const current = /now/i.test(work.date);
+            const current = work.current === true;
             const technologies = work.stack.replace(/^Stack:\s*/, "").replace(/\.$/, "").split(/,\s*|\s+&\s+|\s+and\s+/).map((tag) => tag.trim()).filter(Boolean);
             const paragraphs = [work.text2, work.text3, work.text4, work.text5].filter(Boolean);
             return (
-              <li key={work.company} className={`${styles.entry} ${current ? styles.current : ""}`}>
+              <li
+                key={work.company}
+                className={`${styles.entry} ${current ? styles.current : ""} ${index >= 3 ? styles.revealedEntry : ""}`}
+                style={index >= 3 ? { animationDelay: `${Math.min(index - 3, 6) * 80}ms` } : undefined}
+              >
                 <div className={styles.date}>
                   <span>{work.date.replace("-", " — ").replace("Now", "Present")}</span>
                   {work.months && <small>{work.months.replace(/[()]/g, "")}</small>}
-                  {current && <small className={styles.currentLabel}>Current role</small>}
+                  {current && <small className={styles.currentLabel}>Current project</small>}
+                  {work.status === "pending" && <small>Pending</small>}
+                  {work.status === "completed" && <small>Completed</small>}
                 </div>
                 <span className={styles.marker} aria-hidden="true"><span /></span>
                 <article className={styles.card} aria-labelledby={`role-${index}`}>
                   <header className={styles.cardHeader}>
                     <div className={styles.companyIcon} aria-hidden="true">
-                      {work.company.split(" ").slice(0, 2).map((word) => word[0]).join("")}
+                      {work.company === "NS" ? "NS" : work.company.split(" ").slice(0, 2).map((word) => word[0]).join("")}
                     </div>
                     <div className={styles.company}>
                       <h3 id={`role-${index}`}>{work.company}</h3>
                       <p>{work.title}</p>
                     </div>
-                    <span className={styles.location}><MapPin size={13} aria-hidden="true" />{work.place}</span>
+                    {work.place && <span className={styles.location}><MapPin size={13} aria-hidden="true" />{work.place}</span>}
                   </header>
                   <p className={styles.description}>{work.text}</p>
-                  <ul className={styles.tags} aria-label="Technology highlights">
+                  {technologies.length > 0 && <ul className={styles.tags} aria-label="Technology highlights">
                     {technologies.slice(0, 6).map((tag, i) => <li key={`${tag}-${i}`}>{tag}</li>)}
                     {technologies.length > 6 && <li className={styles.moreTags}>+{technologies.length - 6} more</li>}
-                  </ul>
-                  <details className={styles.details}>
+                  </ul>}
+                  {(paragraphs.length > 0 || technologies.length > 0) && <details className={styles.details}>
                     <summary><span className={styles.closedLabel}>Explore this role</span><span className={styles.openLabel}>Show less</span><ChevronDown size={16} aria-hidden="true" /></summary>
                     <div className={styles.detailContent}>
                       {paragraphs.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
@@ -70,7 +76,7 @@ const WorkPage = () => {
                         {technologies.map((tag, i) => <li key={`${tag}-${i}`}>{tag}</li>)}
                       </ul>
                     </div>
-                  </details>
+                  </details>}
                 </article>
               </li>
             );

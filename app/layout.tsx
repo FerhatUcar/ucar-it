@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "Ucar IT",
   description: "Software solutions",
   applicationName: "ucar-it",
+  icons: {
+    icon: { url: "/favicon.svg", type: "image/svg+xml", sizes: "any" },
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

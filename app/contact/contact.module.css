@@ -1,0 +1,58 @@
+.page h2, .page h3, .page p { font-family: inherit; }
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 26px; }
+.formCard, .infoCard { border: 1px solid #ffffff12; border-radius: 16px; background: linear-gradient(120deg, #1d1d21, #18181b); padding: 30px; }
+.cardHeading { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
+.icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; flex-shrink: 0; color: #ff91aa; background: #fb376612; border: 1px solid #fb37662b; border-radius: 12px; }
+.page h2 { font-size: 19px; font-weight: 650; letter-spacing: -.5px; }
+.cardHeading p, .infoCard > p { margin-top: 7px; font-size: 12px; line-height: 1.8; color: #adadb9; }
+.fields { display: flex; flex-direction: column; gap: 23px; border: 0; padding: 0; min-width: 0; }
+.row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 9px; min-width: 0; }
+.field label { font-size: 12px; font-weight: 600; color: #d5d5df; }
+.field label span, .formFooter p span { color: #ff809e; }
+.page input, .page select, .page textarea { width: 100%; min-width: 0; min-height: 46px; padding: 12px 14px; border: 1px solid #ffffff1c; border-radius: 8px; background: #111113; color: #f4f4f6; font: inherit; font-size: 13px; box-shadow: none; color-scheme: dark; }
+.page input::placeholder, .page textarea::placeholder { color: #90909e; }
+.page textarea { resize: vertical; min-height: 150px; line-height: 1.8; }
+.page select {
+  cursor: pointer;
+  appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23bdbdc8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+.page input[aria-invalid="true"], .page textarea[aria-invalid="true"], .page select[aria-invalid="true"] { border-color: #ff809e; }
+.page input:focus-visible, .page textarea:focus-visible, .page select:focus-visible { border-color: #fb6688; outline: 2px solid #fb668840; outline-offset: 2px; }
+.page .fieldError { color: #ff9db5; font-size: 12px; line-height: 1.6; margin: 0; }
+.captcha { padding: 18px; border: 1px solid #ffffff10; background: #ffffff02; border-radius: 10px; font-size: 12px; }
+.captcha input { max-width: 120px; }
+.error { padding: 14px 16px; background: #fb376610; border: 1px solid #fb376640; border-radius: 8px; font-size: 12px; line-height: 1.8; color: #ffafc2; }
+.formFooter { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 4px; }
+.formFooter p { font-size: 10px; color: #a3a3af; }
+.submit { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 46px; padding: 13px 20px; background: #ed2858; border: 1px solid #ff638b50; color: white; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .2s; }
+.submit:hover { background: #ce1e49; }
+.fields:disabled { opacity: .65; }
+.submit:disabled { cursor: wait; }
+.infoCard .cardHeading { margin-bottom: 0; }
+.contactList { display: flex; flex-direction: column; gap: 19px; padding: 26px 0; list-style: none; }
+.contactList li { display: flex; align-items: center; gap: 12px; font-size: 12px; color: #bdbdc8; overflow-wrap: anywhere; }
+.contactList svg { color: #ff809e; flex-shrink: 0; }
+.contactList a:hover { color: #ff91aa; }
+.socials { padding-top: 23px; border-top: 1px solid #ffffff12; }
+.socials h3 { color: #a3a3af; font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+.socials > div { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+.socials a { display: inline-flex; justify-content: center; align-items: center; width: 44px; height: 44px; border: 1px solid #ffffff12; border-radius: 9px; background: #ffffff04; color: #bdbdc8; }
+.socials a:hover { color: #ff91aa; border-color: #fb376650; }
+.spinner { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 1000px) { .layout { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) {
+  .formCard, .infoCard { padding: 22px 18px; }
+  .row { grid-template-columns: minmax(0, 1fr); gap: 23px; }
+  .page input, .page select, .page textarea { font-size: 16px; }
+  .cardHeading { align-items: flex-start; }
+  .page h2 { font-size: 17px; }
+  .formFooter { flex-direction: column; align-items: stretch; }
+  .formFooter p { text-align: center; }
+}
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } .submit { transition: none; } }

@@ -1,0 +1,144 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+}
+
+.grid > .project {
+  display: grid;
+  grid-template-columns: minmax(240px, 30%) minmax(0, 1fr);
+  grid-column: auto;
+  overflow: hidden;
+  padding: 0;
+}
+
+.brand {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  padding: 28px;
+  background: transparent;
+  border-right: 1px solid #ffffff0c;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  max-width: min(100%, 280px);
+  max-height: 164px;
+  object-fit: contain;
+}
+
+.itsCleanLogo {
+  /* Balance the PNG's transparent margins: 40/44px horizontally, 77/93px vertically. */
+  transform: translate(0.3322%, 2.4024%);
+}
+
+@font-face {
+  font-family: "Ferrygraphy Manrope";
+  src: url("/ferrygraphy-manrope-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+.wordmark {
+  color: #fff;
+  font-family: "Ferrygraphy Manrope", Arial, sans-serif;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: .175em;
+  white-space: nowrap;
+}
+
+.wordmark > span {
+  color: #c7d432;
+}
+
+.body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  padding: 28px 30px 0;
+}
+
+.body .category {
+  margin: 0 0 9px;
+  font-size: 11px;
+}
+
+.number {
+  margin-left: auto;
+  color: #93939f;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.headline {
+  margin: 23px 0 12px;
+  color: #e5e5eb;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.copy p {
+  margin: 0 0 16px;
+}
+
+.tags {
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.footer {
+  margin-top: 23px;
+  border-top: 1px solid #ffffff0c;
+  padding: 10px 0;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  color: #c7c7d0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer a:hover {
+  color: #ff809e;
+}
+
+@media (max-width: 800px) {
+  .grid > .project {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .brand {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .body {
+    padding: 20px 18px 0;
+  }
+
+  .brand {
+    min-height: 190px;
+    padding: 24px;
+  }
+
+  .logo {
+    max-height: 140px;
+  }
+
+  .headline {
+    margin-top: 18px;
+    font-size: 13px;
+  }
+}

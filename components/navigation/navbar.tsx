@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Mail, Menu, X } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import { links } from "@/data/data";
 
 export default function Navbar() {
@@ -78,7 +78,11 @@ export default function Navbar() {
           aria-controls="mobile-navigation"
           onClick={() => setOpen(!open)}
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          <span className="menu-toggle-icon" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
         </button>
       </div>
       <nav

@@ -1,179 +1,133 @@
 "use client";
 
-import { MotionWrapper } from "@/components/motion-wrapper";
-import axios from "axios";
-import * as z from "zod";
-
+import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
-import Field, { selectFieldSubjects } from "@/components/custom/formfield";
-import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { AlertCircle } from "lucide-react";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { generateCaptcha } from "@/utils/captcha";
-import { baseColor } from "@/app/const";
-import dynamic from "next/dynamic";
-import HeaderTitle from "@/components/custom/header";
+import { ArrowUpRight, LoaderCircle, Mail, MessageSquare } from "lucide-react";
 import { contactDetails, socialMedia } from "@/data/data";
-import Link from "next/link";
+import { contactSchema, contactSubjects, type ContactFormData } from "@/lib/contact";
+import { generateCaptcha } from "@/utils/captcha";
+import pageStyles from "@/app/work/work.module.css";
+import styles from "./contact.module.css";
 
-const Captcha = dynamic(() => import("@/components/custom/captcha"), {
-  ssr: false,
-});
+const Captcha = dynamic(() => import("@/components/custom/captcha"), { ssr: false });
 
-type FormDataType = z.infer<typeof formSchema>;
-
-const formSchema = z.object({
-  name: z.string().min(3, {
-    message: "Name must be at least 3 characters.",
-  }),
-  email: z.string().email(),
-  subject: z.string().refine((value) => selectFieldSubjects.includes(value), {
-    message: "Select a subject",
-  }),
-  message: z.string().min(1, {
-    message: "Message can't be empty",
-  }),
-});
-
-const ContactPage = () => {
+export default function ContactPage() {
   const router = useRouter();
-  const form = useForm<FormDataType>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
+  const [error, setError] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+  const [userInput, setUserInput] = useState("");
+  const [captchaValue] = useState(generateCaptcha);
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: { name: "", email: "", subject: "", message: "" },
   });
-  const [formState, setFormState] = useState({
-    error: "",
-    isSubmitting: false,
-    shouldShake: false,
-  });
-  const [userInput, setUserInput] = useState("",)
-  const [captchaValue, setCaptchaValue] = useState(generateCaptcha());
 
-  const inputCorrect = userInput === eval(captchaValue).toString();
+  useEffect(() => {
+    if (captchaError && !isSubmitting) document.getElementById("captcha-answer")?.focus();
+  }, [captchaError, isSubmitting]);
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: ContactFormData) => {
+    setError("");
+    const answer = captchaValue.split(" + ").reduce((sum, number) => sum + Number(number), 0);
+    if (!userInput.trim() || Number(userInput) !== answer) {
+      setCaptchaError("Please check your answer and try again.");
+      return;
+    }
+    setCaptchaError("");
     try {
-      if (inputCorrect) {
-        setCaptchaValue(generateCaptcha());
-        setUserInput("");
-        setFormState({
-          ...formState,
-          isSubmitting: true,
-        });
-
-        await axios.post("/api/contact", values);
-
-        router.push("/thank");
-        router.refresh();
-      } else {
-        setFormState({
-          ...formState,
-          shouldShake: true,
-          error: "Please solve the captcha correctly.",
-        });
-        setTimeout(() => {
-          setFormState({
-            ...formState,
-            shouldShake: false,
-          });
-        }, 500);
-      }
-    } catch (error) {
-      setFormState({
-        ...formState,
-        error: "An unexpected error occurred.",
-        isSubmitting: false,
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
       });
+      if (!response.ok) throw new Error("Message could not be sent");
+      router.push("/thank");
+    } catch {
+      setError("Your message couldn’t be sent. Please try again, or email me at info@ucar-it.nl.");
     }
   };
 
   return (
-    <MotionWrapper>
-      <HeaderTitle text="Lets chats" />
-      <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full">
-        <Card className="bg-stone-950/50 shadow-sm lg:col-span-3 p-6 mt-4">
-          {formState.error && (
-            <Alert className={`mb-4 ${formState && "shake"}`}>
-              <AlertCircle className="h-4 w-4" color={baseColor} />
-              <AlertTitle>Oops..</AlertTitle>
-              <AlertDescription>{formState.error}</AlertDescription>
-            </Alert>
-          )}
-          <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <Field form={form} label="name" type="input" />
-              <Field form={form} label="email" type="input" />
-              <Field form={form} label="subject" type="select" />
-              <Field form={form} label="message" type="textarea" />
-              <Captcha
-                captchaValue={captchaValue}
-                userInput={userInput}
-                setUserInput={setUserInput}
-              />
-              <Button
-                className="m-0 w-full md:w-[150px] float-right bg-rose-600 hover:bg-rose-800"
-                type="submit"
-                disabled={formState.isSubmitting}
-              >
-                {formState.isSubmitting ? (
-                  <span className="flex flex-row">
-                    <svg className="spinner mr-3" viewBox="0 0 50 50">
-                      <circle
-                        className="path"
-                        cx="25"
-                        cy="25"
-                        r="20"
-                        fill="none"
-                        strokeWidth="5"
-                      ></circle>
-                    </svg>
-                    Sending email..
-                  </span>
-                ) : (
-                  "Submit"
-                )}
-              </Button>
-            </form>
-          </Form>
-        </Card>
-        <Card className="bg-stone-950/50 shadow-sm my-4">
-          <CardHeader className="uppercase pb-3">Information</CardHeader>
-          <CardContent className="pb-0">
-            {contactDetails.map((detail) => (
-              <div
-                key={detail.text}
-                className="flex flex-row gap-2 mb-4 items-center"
-              >
-                <detail.icon size={16} color={baseColor} />
-                <span>{detail.text}</span>
+    <main className={`${pageStyles.page} ${styles.page}`}>
+      <header className={pageStyles.hero}>
+        <div>
+          <p className={pageStyles.eyebrow}><span /> LET’S START A CONVERSATION</p>
+          <h1>Let’s talk<span>.</span></h1>
+          <p className={pageStyles.intro}>Have a project in mind, a question or an idea to share? Tell me a little about it and let’s see what we can build together.</p>
+        </div>
+      </header>
+      <div className={styles.layout}>
+        <section className={styles.formCard} aria-labelledby="form-title">
+          <div className={styles.cardHeading}>
+            <span className={styles.icon}><MessageSquare size={21} aria-hidden="true" /></span>
+            <div><h2 id="form-title">Send a message</h2><p>A good conversation is where it starts.</p></div>
+          </div>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate aria-busy={isSubmitting}>
+            <fieldset disabled={isSubmitting} className={styles.fields}>
+              <legend className="sr-only">Your contact details and message</legend>
+              <div className={styles.row}>
+                <div className={styles.field}>
+                  <label htmlFor="contact-name">Your name <span>*</span></label>
+                  <input id="contact-name" autoComplete="name" placeholder="Your name" required maxLength={100} aria-invalid={!!errors.name} aria-describedby={errors.name ? "name-error" : undefined} {...register("name")} />
+                  {errors.name && <p id="name-error" className={styles.fieldError}>{errors.name.message}</p>}
+                </div>
+                <div className={styles.field}>
+                  <label htmlFor="contact-email">Email address <span>*</span></label>
+                  <input id="contact-email" type="email" autoComplete="email" placeholder="you@example.com" required maxLength={254} aria-invalid={!!errors.email} aria-describedby={errors.email ? "email-error" : undefined} {...register("email")} />
+                  {errors.email && <p id="email-error" className={styles.fieldError}>{errors.email.message}</p>}
+                </div>
               </div>
-            ))}
-          </CardContent>
-          <CardHeader className="uppercase pb-2">Lets connect</CardHeader>
-          <CardContent className="mb:pb-0 flex justify-start pb-3">
-            {socialMedia.map((social) => (
-              <Button size="icon" variant="ghost" key={social.link} className="hover:bg-zinc-800">
-                <Link target="_blank" href={social.link}>
-                  <social.icon size={16} color={baseColor} />
-                </Link>
-              </Button>
-            ))}
-          </CardContent>
-        </Card>
+              <div className={styles.field}>
+                <label htmlFor="contact-subject">What’s it about? <span>*</span></label>
+                <select id="contact-subject" required aria-invalid={!!errors.subject} aria-describedby={errors.subject ? "subject-error" : undefined} {...register("subject")}>
+                  <option value="" disabled>Select a subject</option>
+                  {contactSubjects.map((subject) => <option key={subject} value={subject}>{subject}</option>)}
+                </select>
+                {errors.subject && <p id="subject-error" className={styles.fieldError}>{errors.subject.message}</p>}
+              </div>
+              <div className={styles.field}>
+                <label htmlFor="contact-message">Your message <span>*</span></label>
+                <textarea id="contact-message" rows={6} placeholder="Tell me about your project, ideas or questions…" required maxLength={5000} aria-invalid={!!errors.message} aria-describedby={errors.message ? "message-error" : undefined} {...register("message")} />
+                {errors.message && <p id="message-error" className={styles.fieldError}>{errors.message.message}</p>}
+              </div>
+              <div className={styles.captcha}>
+                <Captcha captchaValue={captchaValue} userInput={userInput} setUserInput={(value) => { setUserInput(value); setCaptchaError(""); }} error={captchaError} />
+              </div>
+              {error && <p className={styles.error} role="alert">{error}</p>}
+              <div className={styles.formFooter}>
+                <p>Fields marked <span>*</span> are required.</p>
+                <button className={styles.submit} type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? <>Sending… <LoaderCircle size={17} className={styles.spinner} aria-hidden="true" /></> : <>Send message <ArrowUpRight size={17} aria-hidden="true" /></>}
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <aside className={styles.sidebar} aria-label="Contact information">
+          <section className={styles.infoCard}>
+            <div className={styles.cardHeading}>
+              <span className={styles.icon}><Mail size={21} aria-hidden="true" /></span>
+              <h2>Prefer a direct hello?</h2>
+            </div>
+            <p>You can also reach me by email or phone.</p>
+            <ul className={styles.contactList}>
+              {contactDetails.map(({ icon: Icon, text }) => (
+                <li key={text}><Icon size={16} aria-hidden="true" />{text.includes("@") ? <a href={`mailto:${text}`}>{text}</a> : text.startsWith("+") ? <a href={`tel:${text}`}>{text}</a> : <span>{text}</span>}</li>
+              ))}
+            </ul>
+            <div className={styles.socials}>
+              <h3>Let’s connect</h3>
+              <div>{socialMedia.map(({ icon: Icon, link }) => (
+                <Link key={link} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Visit my ${new URL(link).hostname.replace("www.", "").split(".")[0]} profile (opens in a new tab)`}><Icon size={18} aria-hidden="true" /></Link>
+              ))}</div>
+            </div>
+          </section>
+        </aside>
       </div>
-    </MotionWrapper>
+    </main>
   );
-};
-
-export default ContactPage;
+}

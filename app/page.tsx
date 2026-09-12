@@ -47,7 +47,7 @@ export default function Home() {
     <main id="main-content" className="home-page">
       <section className="home-hero" aria-labelledby="hero-title">
         <Image
-          src="/hero-desk.png"
+          src="/hero-desk-v2.png"
           alt=""
           fill
           priority
@@ -62,7 +62,7 @@ export default function Home() {
           <h1 id="hero-title">
             Good ideas.
             <br />
-            Great <span>software.</span>
+            Great <span className="hero-software">software<span className="hero-cursor" aria-hidden="true">|</span></span>
           </h1>
           <p className="hero-intro">
             I’m Ferhat Ucar. I bring design and engineering together to build
@@ -126,9 +126,9 @@ export default function Home() {
             <article key={number} className="expertise-card">
               <div className="service-top">
                 <Icon size={25} aria-hidden="true" />
+                <h3>{title}</h3>
                 <span>{number}</span>
               </div>
-              <h3>{title}</h3>
               <p>{text}</p>
               <span className="service-tags">{tags}</span>
             </article>

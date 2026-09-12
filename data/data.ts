@@ -1,4 +1,5 @@
 import { Facebook, Github, Instagram, Linkedin } from "@/components/ui/brand-icons";
+import type { WorkDataType } from "@/app/types";
 import {
   BarChart2,
   BetweenHorizonalEndIcon,
@@ -52,7 +53,6 @@ export const links = [
   { label: "Work", href: "/work", icon: Briefcase },
   { label: "Skills", href: "/skills", icon: BarChart2 },
   { label: "Projects", href: "/projects", icon: BriefcaseBusiness },
-  { label: "Contact", href: "/contact", icon: Phone },
 ];
 
 export const AboutParagraphs = [
@@ -89,7 +89,7 @@ export const AboutParagraphs = [
     desc: "Stay and wander",
     icon: Plane,
     text: "Beyond the digital realm, I am a globetrotter who finds inspiration in diverse cultures and landscapes. My role as a photographer allows them to combine their love for technology with a passion for visual storytelling, while video editing further enhances their ability to convey compelling narratives.",
-    image: "/travel.jpg",
+    image: "/ferry-sm.jpg",
   },
   {
     title: "Cooking.",
@@ -111,19 +111,41 @@ export const AboutParagraphs = [
   },
 ];
 
-export const workInformation = [
+export const workInformation: WorkDataType[] = [
+  {
+    company: "NS",
+    date: "Sep 2026-Now",
+    current: true,
+    status: "pending",
+    place: "",
+    title: "Upcoming assignment",
+    text: "I’m starting a new assignment at NS. Project details will follow once the assignment begins.",
+    stack: "",
+  },
+  {
+    company: "Kadaster",
+    date: "Sep 2025-Sep 2026",
+    status: "completed",
+    place: "",
+    title: "Frontend Developer",
+    text: "During a one-year assignment at Kadaster, I worked with Angular, Azure, Liferay CMS and the OneWelcome API, with a focus on accessibility in line with WCAG.",
+    text2:
+      "I also set up backend documentation for the payments service.",
+    stack: "Stack: Angular, Azure, Liferay CMS, OneWelcome API, WCAG",
+  },
   {
     company: "DHL eCommerce",
-    date: "2024-Now",
+    date: "Sep 2024-Sep 2025",
+    status: "completed",
     place: "Utrecht",
     title: "Frontend Developer",
-    text: "At DHL eCommerce, I work as a frontend developer on a native courier app built with React and Kotlin. The app is designed to work fully offline using local storage, allowing seamless CRUD operations in the field.",
+    text: "At DHL eCommerce, I worked as a frontend developer on a native courier app built with React and Kotlin. The app was designed to work fully offline using local storage, allowing seamless CRUD operations in the field.",
     text2:
-      "Data fetching and submission are handled using Tanstack Query, with validation through Zod and form management via React Hook Form. The app interfaces with native hardware like GPS, scanners, and cameras via the Honeywell scanner device.",
+      "Data fetching and submission were handled using Tanstack Query, with validation through Zod and form management via React Hook Form. The app interfaced with native hardware like GPS, scanners, and cameras via the Honeywell scanner device.",
     text3:
       "On the backend, I’ve contributed to building and maintaining Spring Boot APIs, implemented REST endpoints, integrated Keycloak for authentication, and built Kafka producers/consumers for async data flows. I also wrote SQL for Oracle and PostgreSQL databases.",
     text4:
-      "The entire platform runs in Docker containers, deployed to Kubernetes via Helm. We use JFrog for image management and monitor everything through Datadog and Sentry. I’ve also implemented thorough E2E testing with Cypress and unit testing with Jest.",
+      "The entire platform ran in Docker containers, deployed to Kubernetes via Helm. We used JFrog for image management and monitored everything through Datadog and Sentry. I also implemented thorough E2E testing with Cypress and unit testing with Jest.",
     stack:
       "Stack: Figma, HTML5, TypeScript, React (Native), Tanstack Query, Zod, React Hook Form, Material UI, Storybook, Cypress, Jest, Keycloak, Java, Kotlin, Spring Boot, Docker, Kubernetes, Kafka, Oracle, PostgreSQL, JFrog, Helm, Azure DevOps, Datadog, Sentry",
   },

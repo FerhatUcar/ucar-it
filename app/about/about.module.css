@@ -1,0 +1,96 @@
+.stories {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+}
+
+.storyCard {
+  grid-column: auto;
+  padding-bottom: 28px;
+}
+
+.storyContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 23px;
+}
+
+.portrait {
+  width: 128px;
+  height: 128px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.copy {
+  min-width: 0;
+}
+
+.copy p {
+  margin: 0;
+}
+
+.copy p + p {
+  margin-top: 16px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  border-top: 1px solid #ffffff0c;
+  margin-top: 23px;
+  padding-top: 18px;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  color: #c7c7d0;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: #ff809e;
+}
+
+@media (min-width: 1100px) {
+  .stories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 400px;
+    gap: 16px;
+  }
+
+  .overview > div + div {
+    padding-left: 16px;
+  }
+
+  .storyCard {
+    padding-bottom: 20px;
+  }
+
+  .storyContent {
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+  }
+
+  .portrait {
+    width: 104px;
+    height: 104px;
+    border-radius: 12px;
+  }
+}

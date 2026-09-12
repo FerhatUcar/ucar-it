@@ -6,6 +6,8 @@ export type WorkDataType = {
     text: string,
     stack: string,
     months?: string,
+    current?: boolean,
+    status?: "pending" | "completed",
     text2?: string,
     text3?: string,
     text4?: string,

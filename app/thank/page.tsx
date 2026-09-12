@@ -1,24 +1,22 @@
-import React from "react";
-import { MotionWrapper } from "@/components/motion-wrapper";
-import HeaderTitle from "@/components/custom/header";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ArrowUpRight, Check } from "lucide-react";
+import styles from "@/app/work/work.module.css";
+import contactStyles from "@/app/contact/contact.module.css";
 
-const ThankPage = () => {
+export default function ThankPage() {
   return (
-    <MotionWrapper>
-      <HeaderTitle text="Thanks" />
-      <h2 className="w-full text-2xl font-bold">I will get back 2 you soon!</h2>
-      <div className="flex flex-wrap gap-2 justify-start mt-3">
-        <Button className="bg-rose-600 hover:bg-rose-800">
-          <Link href="/">Back to home</Link>
-        </Button>
-        <Button variant="secondary" className="bg-zinc-800 hover:bg-zinc-700">
-          <Link href="/contact">Another message?</Link>
-        </Button>
+    <main className={styles.page}>
+      <header className={styles.hero}>
+        <div>
+          <p className={styles.eyebrow}><Check size={16} aria-hidden="true" /> MESSAGE SENT</p>
+          <h1>Thank you<span>.</span></h1>
+          <p className={styles.intro}>Your message is on its way. I’ll get back to you soon.</p>
+        </div>
+      </header>
+      <div className="flex flex-wrap items-center gap-6">
+        <Link href="/" className={contactStyles.submit}>Back to home <ArrowUpRight size={17} aria-hidden="true" /></Link>
+        <Link href="/contact" className="text-sm text-zinc-300 hover:text-rose-300">Send another message</Link>
       </div>
-    </MotionWrapper>
+    </main>
   );
-};
-
-export default ThankPage;
+}

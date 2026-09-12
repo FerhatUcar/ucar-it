@@ -102,7 +102,7 @@ const ContactPage = () => {
     <MotionWrapper>
       <HeaderTitle text="Lets chats" />
       <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full px-4 lg:px-0">
-        <Card className="bg-stone-950/50 shadow lg:col-span-3 p-6 mt-4">
+        <Card className="bg-stone-950/50 shadow-sm lg:col-span-3 p-6 mt-4">
           {formState.error && (
             <Alert className={`mb-4 ${formState && "shake"}`}>
               <AlertCircle className="h-4 w-4" color={baseColor} />
@@ -147,7 +147,7 @@ const ContactPage = () => {
             </form>
           </Form>
         </Card>
-        <Card className="bg-stone-950/50 shadow my-4">
+        <Card className="bg-stone-950/50 shadow-sm my-4">
           <CardHeader className="uppercase pb-3">Information</CardHeader>
           <CardContent className="pb-0">
             {contactDetails.map((detail) => (

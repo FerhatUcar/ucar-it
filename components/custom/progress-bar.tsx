@@ -1,6 +1,6 @@
 import React from "react";
 
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
 import { Counter } from "@/components/custom/counter";
 
 export const ProgressCircle = ({
@@ -19,7 +19,7 @@ export const ProgressCircle = ({
     Math.ceil((circumference / 100) * (percents - 100)),
   );
 
-  const transition = {
+  const transition: Transition = {
     duration: duration,
     delay: delay,
     ease: "easeIn",

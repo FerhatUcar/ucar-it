@@ -2,6 +2,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+Install dependencies with `npm ci`. Run `npm run build`, `npm run typecheck`, and
+`npm run lint` to validate changes.
+
+TypeScript 7 runs through the `@typescript/native` npm alias (`tsc`). The
+`typescript` alias provides Microsoft's TypeScript 6 compatibility API for
+Next.js and ESLint, following the
+[TypeScript migration guidance](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0).
+ESLint stays on the latest 9.x release because Next.js's current React and
+accessibility plugins do not support ESLint 10 yet.
+
 First, run the development server:
 
 ```bash

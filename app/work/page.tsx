@@ -30,7 +30,7 @@ const WorkPage = () => {
         exit={{ scale: 0 }}
       >
         <Card
-          className={`bg-stone-950/50 shadow lg:mr-0 mr-6 ml-3 md:mr-6 md:ml-0 ${hideButton && "last:mb-6"}`}
+          className={`bg-stone-950/50 shadow-sm lg:mr-0 mr-6 ml-3 md:mr-6 md:ml-0 ${hideButton && "last:mb-6"}`}
         >
           <CardHeader className="text-gray-700">
             <CardTitle className="text-white">
@@ -62,7 +62,7 @@ const WorkPage = () => {
     <MotionWrapper>
       <HeaderTitle text="Work Experience" bottomSpace />
       <div className="grid grid-cols-1 gap-4">
-        {/*<Card className="bg-stone-950/50 shadow lg:mr-0 mx-6 md:mr-6 p-3 flex items-center gap-4 flex-col md:justify-between md:flex-row">*/}
+        {/*<Card className="bg-stone-950/50 shadow-sm lg:mr-0 mx-6 md:mr-6 p-3 flex items-center gap-4 flex-col md:justify-between md:flex-row">*/}
         {/*  <span>Want to read this on a PDF file?</span>*/}
         {/*  <Button*/}
         {/*    onClick={handleDownload}*/}

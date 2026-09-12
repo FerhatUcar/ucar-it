@@ -1,3 +1,4 @@
+import { Facebook, Github, Instagram, Linkedin } from "@/components/ui/brand-icons";
 import {
   BarChart2,
   BetweenHorizonalEndIcon,
@@ -7,12 +8,8 @@ import {
   CameraIcon,
   CircleUserRound,
   Coffee,
-  Facebook,
-  Github,
   Home,
-  Instagram,
   Laptop,
-  Linkedin,
   Mail,
   MapPin,
   NotebookText,

@@ -5,9 +5,7 @@ import { usePathname } from "next/navigation";
 import { links } from "@/data/data";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
-import { CloseIcon } from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
-import { wait } from "next/dist/lib/wait";
+import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { baseColor } from "@/app/const";
@@ -19,7 +17,7 @@ const NavigationMobile = () => {
   const handleMenu = () => setOpen(!open);
 
   const handleMenuItem = async () => {
-    await wait(250);
+    await new Promise((resolve) => setTimeout(resolve, 250));
     handleMenu();
   };
 
@@ -56,7 +54,7 @@ const NavigationMobile = () => {
               className="float-right mb-1"
               onClick={handleMenu}
             >
-              <CloseIcon />
+              <X />
             </Button>
             {links.map(({ href, icon: Icon, label }) => (
               <Link href={href} key={href} onClick={handleMenuItem}>

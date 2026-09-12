@@ -2,8 +2,8 @@
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: start; gap: 26px; }
 .formCard, .infoCard { border: 1px solid #ffffff12; border-radius: 16px; background: linear-gradient(120deg, #1d1d21, #18181b); padding: 30px; }
 .cardHeading { display: flex; align-items: center; gap: 14px; margin-bottom: 30px; }
-.icon { display: inline-flex; align-items: center; justify-content: center; width: 46px; height: 46px; flex-shrink: 0; color: #ff91aa; background: #fb376612; border: 1px solid #fb37662b; border-radius: 12px; }
-.page h2 { font-size: 19px; font-weight: 650; letter-spacing: -.5px; }
+.icon { flex-shrink: 0; color: #ff91aa; }
+.page h2 { display: flex; align-items: center; gap: 14px; font-size: 19px; font-weight: 650; letter-spacing: -.5px; }
 .cardHeading p, .infoCard > p { margin-top: 7px; font-size: 12px; line-height: 1.8; color: #adadb9; }
 .fields { display: flex; flex-direction: column; gap: 23px; border: 0; padding: 0; min-width: 0; }
 .row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }

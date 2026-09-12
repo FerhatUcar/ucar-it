@@ -63,8 +63,7 @@ export default function ContactPage() {
       <div className={styles.layout}>
         <section className={styles.formCard} aria-labelledby="form-title">
           <div className={styles.cardHeading}>
-            <span className={styles.icon}><MessageSquare size={21} aria-hidden="true" /></span>
-            <div><h2 id="form-title">Send a message</h2><p>A good conversation is where it starts.</p></div>
+            <div><h2 id="form-title"><MessageSquare className={styles.icon} size={21} aria-hidden="true" />Send a message</h2><p>A good conversation is where it starts.</p></div>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} noValidate aria-busy={isSubmitting}>
             <fieldset disabled={isSubmitting} className={styles.fields}>
@@ -110,8 +109,7 @@ export default function ContactPage() {
         <aside className={styles.sidebar} aria-label="Contact information">
           <section className={styles.infoCard}>
             <div className={styles.cardHeading}>
-              <span className={styles.icon}><Mail size={21} aria-hidden="true" /></span>
-              <h2>Prefer a direct hello?</h2>
+              <h2><Mail className={styles.icon} size={21} aria-hidden="true" />Prefer a direct hello?</h2>
             </div>
             <p>You can also reach me by email or phone.</p>
             <ul className={styles.contactList}>

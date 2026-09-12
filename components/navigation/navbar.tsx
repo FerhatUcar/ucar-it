@@ -91,10 +91,11 @@ export default function Navbar() {
         className="mobile-nav"
         hidden={!open}
       >
-        {links.map(({ href, label, icon: Icon }) => (
+        {links.map(({ href, label, icon: Icon }, index) => (
           <Link
             key={href}
             href={href}
+            style={{ animationDelay: `${index * 50}ms` }}
             aria-current={pathname === href ? "page" : undefined}
             onClick={() => setOpen(false)}
           >

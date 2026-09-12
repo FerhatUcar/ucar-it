@@ -590,10 +590,6 @@
   }
   .mobile-nav:not([hidden]) {
     display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
     max-height: calc(100dvh - 72px);
     overflow-y: auto;
     background: #17171b;
@@ -609,6 +605,7 @@
     border-radius: 7px;
     font-size: 14px;
     color: #aaaab6;
+    animation: skill-slide-up 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   .mobile-nav a > span {
     display: flex;
@@ -747,7 +744,8 @@
   .hero-cursor {
     animation: none;
   }
-  .skill-card {
+  .skill-card,
+  .mobile-nav a {
     animation: none;
   }
   .home-page *,

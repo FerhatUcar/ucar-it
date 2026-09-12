@@ -13,7 +13,7 @@ const HeaderTitle = ({
   fadeIn?: boolean;
 }) => (
   <h1
-    className={`text-4xl md:text-6xl font-black ${bottomSpace && "mb-6"} ${fadeIn && "fadeIn"}`}
+    className={`w-full text-4xl md:text-6xl font-black ${bottomSpace && "mb-6"} ${fadeIn && "fadeIn"}`}
   >
     {text && text}
     {rainbowText && <RainbowText text={rainbowText} />}

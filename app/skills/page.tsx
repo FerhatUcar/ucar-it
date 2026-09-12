@@ -1,38 +1,50 @@
 "use client";
 
 import { MotionWrapper } from "@/components/motion-wrapper";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import { ProgressCircle } from "@/components/custom/progress-bar";
 import HeaderTitle from "@/components/custom/header";
 import { skills } from "@/data/data";
 
 const SkillsPage = () => (
   <MotionWrapper>
     <HeaderTitle text="Skills" bottomSpace />
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:w-auto w-full px-8 pb-6">
+    <p className="mb-8 max-w-2xl text-sm leading-7 text-zinc-400">
+      The tools and technologies I work with, from interfaces to infrastructure.
+    </p>
+    <ul className="skills-grid" aria-label="Technical skills">
       {skills.map(({ src, title, subtitle, percents, logoWidth }) => (
-        <Card key={title} className="bg-stone-950/50">
-          <CardHeader className="flex flex-row items-center text-gray-700">
-            <CardTitle className="text-white flex flex-row items-center gap-2">
+        <li key={title} className="skill-card">
+          <div className="skill-heading">
+            <div className="skill-logo">
               <Image
                 src={src}
-                alt={title}
-                width={logoWidth ?? "32"}
-                height="32"
+                alt=""
+                width={logoWidth ?? 32}
+                height={32}
               />
-              <div className="flex flex-col">
-                <span>{title}</span>
-                <span className="text-base">{subtitle}</span>
-              </div>
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="progress text-gray-400">
-            <ProgressCircle percents={percents} />
-          </CardContent>
-        </Card>
+            </div>
+            <div>
+              <h2 className="skill-name">{title}</h2>
+              {subtitle && <p className="skill-subtitle">{subtitle}</p>}
+            </div>
+          </div>
+          <div className="skill-level" aria-hidden="true">
+            <span className="skill-value">{percents}<span>%</span></span>
+            <span className="skill-level-label">Proficiency</span>
+          </div>
+          <div
+            className="skill-track"
+            role="progressbar"
+            aria-label={`${title}${subtitle ? ` ${subtitle}` : ""} proficiency`}
+            aria-valuenow={percents}
+            aria-valuemin={0}
+            aria-valuemax={100}
+          >
+            <div className="skill-fill" style={{ width: `${percents}%` }} />
+          </div>
+        </li>
       ))}
-    </div>
+    </ul>
   </MotionWrapper>
 );
 

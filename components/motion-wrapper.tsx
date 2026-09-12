@@ -13,7 +13,7 @@ export function MotionWrapper({ children }: WrapperProps) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <main className="flex flex-col m-auto items-center md:w-[75%] xl:w-[65%] pt-6 md:py-20">
+        <main className="flex w-full flex-col items-stretch px-[6%] text-left pt-6 md:px-[5%] md:py-20">
           {children}
         </main>
       </motion.div>

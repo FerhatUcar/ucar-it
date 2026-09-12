@@ -8,8 +8,8 @@ const ThankPage = () => {
   return (
     <MotionWrapper>
       <HeaderTitle text="Thanks" />
-      <h2 className="text-2xl font-bold">I will get back 2 you soon!</h2>
-      <div className="flex gap-2 justify-between mt-3">
+      <h2 className="w-full text-2xl font-bold">I will get back 2 you soon!</h2>
+      <div className="flex flex-wrap gap-2 justify-start mt-3">
         <Button className="bg-rose-600 hover:bg-rose-800">
           <Link href="/">Back to home</Link>
         </Button>

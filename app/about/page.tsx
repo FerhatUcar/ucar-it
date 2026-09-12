@@ -32,7 +32,7 @@ const AboutPage = () => {
         {p.image && (
           <Image
             src={p.image}
-            className="mx-auto mb-3 md:mr-4 w-32 h-32 rounded-full border-solid border-4 border-white"
+            className="mb-3 md:mr-4 w-32 h-32 rounded-full border-solid border-4 border-white"
             alt={p.title}
             width="120"
             height="160"
@@ -73,7 +73,7 @@ const AboutPage = () => {
   return (
     <MotionWrapper>
       <HeaderTitle text="About me" bottomSpace />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mx-6 lg:mx-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         {pageParagraphs}
       </div>
     </MotionWrapper>

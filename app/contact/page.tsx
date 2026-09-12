@@ -101,7 +101,7 @@ const ContactPage = () => {
   return (
     <MotionWrapper>
       <HeaderTitle text="Lets chats" />
-      <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full px-4 lg:px-0">
+      <div className="grid grid-col-1 gap-4 lg:grid-cols-4 w-full">
         <Card className="bg-stone-950/50 shadow-sm lg:col-span-3 p-6 mt-4">
           {formState.error && (
             <Alert className={`mb-4 ${formState && "shake"}`}>
@@ -161,7 +161,7 @@ const ContactPage = () => {
             ))}
           </CardContent>
           <CardHeader className="uppercase pb-2">Lets connect</CardHeader>
-          <CardContent className="mb:pb-0 flex lg:justify-center pb-3">
+          <CardContent className="mb:pb-0 flex justify-start pb-3">
             {socialMedia.map((social) => (
               <Button size="icon" variant="ghost" key={social.link} className="hover:bg-zinc-800">
                 <Link target="_blank" href={social.link}>

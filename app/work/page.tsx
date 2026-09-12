@@ -7,8 +7,9 @@ import { workInformation } from "@/data/data";
 import styles from "./work.module.css";
 
 const WorkPage = () => {
-  const [showAll, setShowAll] = useState(false);
-  const experience = showAll ? workInformation : workInformation.slice(0, 3);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const experience = workInformation.slice(0, visibleCount);
+  const nextCount = Math.min(3, workInformation.length - experience.length);
 
   return (
     <main className={styles.page}>
@@ -83,9 +84,9 @@ const WorkPage = () => {
           })}
         </ol>
         <div className={styles.timelineEnd}>
-          {!showAll ? (
-            <button className={styles.loadMore} onClick={() => setShowAll(true)} aria-controls="experience-progress">
-              <ArrowDown size={16} aria-hidden="true" /> View earlier experience <span>+{workInformation.length - 3}</span>
+          {nextCount > 0 ? (
+            <button className={styles.loadMore} onClick={() => setVisibleCount((count) => Math.min(count + 3, workInformation.length))} aria-controls="experience-progress">
+              <ArrowDown size={16} aria-hidden="true" /> View earlier experience <span>+{nextCount}</span>
             </button>
           ) : <span className={styles.startLabel}>2014 · Where it all started</span>}
           <p id="experience-progress" role="status">Showing {experience.length} of {workInformation.length} roles</p>
